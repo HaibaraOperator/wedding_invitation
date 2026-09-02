@@ -1,0 +1,293 @@
+{
+  "$schema": "./level.schema.json",
+  "level_id": "wedding_map_meet_part_01",
+  "map": {
+    "json": "./assets/maps/wedding_map_meet.runtime.json",
+    "image": "./assets/maps/wedding_map_meet.runtime.png",
+    "width": 3360,
+    "height": 480,
+    "ground_y": 416,
+    "cell_width": 16,
+    "cell_height": 32,
+    "coordinate_input": "one_based_editor_anchor"
+  },
+  "player_start": {
+    "x": 64,
+    "y": 384,
+    "form": "SMALL"
+  },
+  "chapter_transition": {
+    "cinematic": "flight_to_ireland",
+    "next_level": "travel",
+    "message": "飞越亚欧大陆，前往第二段旅程"
+  },
+  "camera": {
+    "follow_player": true,
+    "parallax_background": false,
+    "player_screen_ratio": 0.34,
+    "vertical_mode": "bottom"
+  },
+  "movement": {
+    "run_speed": 132,
+    "gravity": 1100,
+    "normal_jump_velocity": 455,
+    "hold_jump_acceleration": 560,
+    "max_hold_duration": 0.38,
+    "max_jump_height": 220,
+    "stomp_bounce_velocity": 300,
+    "enemy_detection_cells": 6,
+    "flag_detection_cells": 6,
+    "flag_leap_duration": 1.05,
+    "jump_speed_multiplier": 1.5
+  },
+  "counter": {
+    "initial_value": 0,
+    "finish_value": 20261005
+  },
+  "stop_points": [
+    { "id": "stop_01_mushroom", "anchor": [31, 10], "x": 480, "reason": "question_block" },
+    { "id": "stop_02_welcome_1", "anchor": [43, 10], "x": 672, "reason": "question_block" },
+    { "id": "stop_03_welcome_2", "anchor": [47, 10], "x": 736, "reason": "question_block" },
+    { "id": "stop_04_coin_route", "anchor": [51, 13], "x": 800, "reason": "scripted_jump" },
+    { "id": "stop_05_goomba", "anchor": [57, 13], "x": 824, "reason": "enemy" },
+    { "id": "stop_06_koopa", "anchor": [75, 13], "x": 1112, "reason": "enemy" },
+    { "id": "stop_07_piranha", "anchor": [65, 13], "x": 976, "reason": "enemy" },
+    { "id": "stop_08_bride", "anchor": [103, 10], "x": 1632, "reason": "question_block" },
+    { "id": "stop_09_uk_1", "anchor": [121, 10], "x": 1920, "reason": "question_block" },
+    { "id": "stop_10_uk_2", "anchor": [127, 7], "x": 2016, "reason": "question_block" },
+    { "id": "stop_11_uk_3", "anchor": [133, 10], "x": 2112, "reason": "question_block" },
+    { "id": "stop_12_coin_gauntlet", "anchor": [145, 13], "x": 2232, "reason": "coin_gauntlet" },
+    { "id": "stop_13_home_gallery", "anchor": [197, 13], "x": 3136, "reason": "photo_gallery" }
+  ],
+  "story_events": [
+    {
+      "id": "stop_01_mushroom",
+      "ordinal": 1,
+      "stop_x": 480,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_mushroom",
+      "prompt": "超级蘑菇问号格 · 点击跳跃"
+    },
+    {
+      "id": "stop_02_welcome_1",
+      "ordinal": 2,
+      "stop_x": 672,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_welcome_1",
+      "prompt": "点击跳跃，开启第一张请柬"
+    },
+    {
+      "id": "stop_03_welcome_2",
+      "ordinal": 3,
+      "stop_x": 736,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_welcome_2",
+      "prompt": "点击跳跃，继续我们的故事"
+    },
+    {
+      "id": "stop_04_coin_route",
+      "ordinal": 4,
+      "stop_x": 800,
+      "reason": "scripted_jump",
+      "action": "special_coin_route",
+      "target_id": "block_coin_high",
+      "waypoint": { "column": 49, "row": 9 },
+      "ledge_landing": { "column": 45, "row": 9 },
+      "ground_landing": { "column": 53, "row": 13 },
+      "prompt": "点击执行回身二段跳"
+    },
+    {
+      "id": "stop_05_goomba",
+      "ordinal": 5,
+      "stop_x": 824,
+      "reason": "enemy",
+      "action": "standard_enemy",
+      "target_id": "goomba_01",
+      "prompt": "前方蘑菇怪 · 点击踩踏"
+    },
+    {
+      "id": "stop_07_piranha",
+      "ordinal": 7,
+      "stop_x": 976,
+      "reason": "enemy",
+      "action": "piranha_stomp",
+      "target_id": "piranha_01",
+      "prompt": "食人花已出现 · 点击踩飞"
+    },
+    {
+      "id": "stop_06_koopa",
+      "ordinal": 6,
+      "stop_x": 1112,
+      "reason": "enemy",
+      "action": "koopa_double_stomp",
+      "target_id": "koopa_01",
+      "prompt": "乌龟怪 · 点击连续踩踏两次"
+    },
+    {
+      "id": "stop_08_bride",
+      "ordinal": 8,
+      "stop_x": 1632,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_bride",
+      "bride_destination": { "column": 100, "row": 13 },
+      "prompt": "新娘问号格 · 点击迎接她"
+    },
+    {
+      "id": "stop_09_uk_1",
+      "ordinal": 9,
+      "stop_x": 1920,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_uk_1",
+      "prompt": "点击跳跃，翻开英国篇章"
+    },
+    {
+      "id": "stop_10_uk_2",
+      "ordinal": 10,
+      "stop_x": 2016,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_uk_2",
+      "prompt": "点击跳跃，继续英国篇章"
+    },
+    {
+      "id": "stop_11_uk_3",
+      "ordinal": 11,
+      "stop_x": 2112,
+      "reason": "question_block",
+      "action": "jump_block",
+      "target_id": "block_uk_3",
+      "prompt": "点击跳跃，收藏斯旺西的夕阳"
+    },
+    {
+      "id": "stop_12_coin_gauntlet",
+      "ordinal": 12,
+      "stop_x": 2232,
+      "reason": "coin_gauntlet",
+      "action": "coin_gauntlet",
+      "enemy_ids": ["goomba_chain_1", "goomba_chain_2", "goomba_chain_3"],
+      "coin_ids": ["coin_chain_1", "coin_chain_2", "coin_chain_3"],
+      "prompt": "点击开始连续踩踏与金币跳跃"
+    },
+    {
+      "id": "stop_13_home_gallery",
+      "ordinal": 13,
+      "stop_x": 3136,
+      "reason": "photo_gallery",
+      "action": "photo_gallery",
+      "gallery_id": "home_gallery",
+      "prompt": "点击打开故乡照片"
+    }
+  ],
+  "question_blocks": [
+    { "id": "block_mushroom", "column": 30, "row": 9, "content_type": "mushroom", "activated": false },
+    { "id": "block_welcome_1", "column": 42, "row": 9, "content_type": "photo", "photo_id": "welcome_1", "activated": false },
+    { "id": "block_welcome_2", "column": 46, "row": 9, "content_type": "photo", "photo_id": "welcome_2", "activated": false },
+    { "id": "block_coin_high", "column": 44, "row": 5, "content_type": "coin", "activated": false },
+    { "id": "block_bride", "column": 102, "row": 9, "content_type": "bride", "activated": false },
+    { "id": "block_uk_1", "column": 120, "row": 9, "content_type": "photo", "photo_id": "UK_1", "activated": false },
+    { "id": "block_uk_2", "column": 126, "row": 6, "content_type": "photo", "photo_id": "UK_2", "activated": false },
+    { "id": "block_uk_3", "column": 132, "row": 9, "content_type": "photo", "photo_id": "UK_3", "activated": false }
+  ],
+  "photos": [
+    {
+      "id": "welcome_1",
+      "photo_path": "./assets/photos/welcome_1.png",
+      "days_together": null,
+      "fit": "contain",
+      "text": "欢迎来到王郅臻与梁晓媛的婚礼",
+      "typewriter_cps": 14
+    },
+    {
+      "id": "welcome_2",
+      "photo_path": "./assets/photos/welcome_2.jpg",
+      "days_together": null,
+      "fit": "contain",
+      "text": "这是我们跨越山河来到你们这里的请柬，也是我们踏过山丘大洋传达彼方的故事",
+      "typewriter_cps": 14
+    },
+    {
+      "id": "UK_1",
+      "photo_path": "./assets/photos/UK_1.jpg",
+      "days_together": "00035",
+      "fit": "contain",
+      "text": "相遇在布里斯托的樱花树下",
+      "typewriter_cps": 14
+    },
+    {
+      "id": "UK_2",
+      "photo_path": "./assets/photos/UK_2.jpg",
+      "days_together": "00085",
+      "fit": "contain",
+      "text": "带上羊驼宝宝们爬上卡尔顿山",
+      "typewriter_cps": 14
+    },
+    {
+      "id": "UK_3",
+      "photo_path": "./assets/photos/UK_3.jpg",
+      "days_together": "00117",
+      "fit": "contain",
+      "text": "斯旺西有夕阳，波涛与烟花，还有你",
+      "typewriter_cps": 14
+    }
+  ],
+  "galleries": [
+    {
+      "id": "home_gallery",
+      "text": "来到彼此的故乡，又迎来短暂的分别。",
+      "typewriter_cps": 14,
+      "photos": [
+        { "photo_path": "./assets/photos/home_1.jpg", "alt": "故乡照片一", "counter_value": "00143" },
+        { "photo_path": "./assets/photos/home_2.jpg", "alt": "故乡照片二", "counter_value": "00157" },
+        { "photo_path": "./assets/photos/home_3.jpg", "alt": "故乡照片三", "counter_value": "00224" }
+      ]
+    }
+  ],
+  "enemies": [
+    { "id": "goomba_01", "type": "goomba", "x": 896, "ground_y": 416, "state": "ACTIVE", "hp": 1 },
+    {
+      "id": "piranha_01",
+      "type": "piranha",
+      "x": 1040,
+      "y": 288,
+      "hidden_y": 288,
+      "target_y": 240,
+      "reveal_clip_y": 288,
+      "reveal_duration": 1.15,
+      "ground_y": 416,
+      "state": "HIDDEN",
+      "hp": 1
+    },
+    { "id": "koopa_01", "type": "koopa", "x": 1184, "ground_y": 416, "state": "ACTIVE", "hp": 2 },
+    { "id": "goomba_chain_1", "type": "goomba", "x": 2304, "ground_y": 416, "state": "ACTIVE", "hp": 1 },
+    { "id": "goomba_chain_2", "type": "goomba", "x": 2416, "ground_y": 416, "state": "ACTIVE", "hp": 1 },
+    { "id": "goomba_chain_3", "type": "goomba", "x": 2512, "ground_y": 416, "state": "ACTIVE", "hp": 1 }
+  ],
+  "piranha_reveal": {
+    "enemy_id": "piranha_01",
+    "trigger_column": 65,
+    "target_anchor": [66, 9]
+  },
+  "collectibles": [
+    { "id": "coin_chain_1", "column": 149, "row": 8 },
+    { "id": "coin_chain_2", "column": 155, "row": 8 },
+    { "id": "coin_chain_3", "column": 161, "row": 8 }
+  ],
+  "flag": {
+    "id": "unused_first_segment_flag",
+    "x": 99999,
+    "ground_y": 416,
+    "width": 64,
+    "height": 165
+  },
+  "debug": {
+    "enabled": false,
+    "draw_colliders": true,
+    "draw_detection_ranges": true,
+    "collision_debug_alpha": 0
+  }
+}

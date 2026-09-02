@@ -1,0 +1,23 @@
+{
+  "map_png": "./assets/maps/your_map.png",
+  "map_json": "./assets/maps/your_map.json",
+  "stop_points": [
+    {
+      "id": "photo_stop_01",
+      "x": 480,
+      "reason": "question_block",
+      "target_id": "photo_block_01"
+    }
+  ],
+  "photos": [
+    {
+      "id": "wedding_photo_01",
+      "photo_path": "./assets/photos/photo_01.jpg",
+      "days_together": 1000,
+      "fit": "contain",
+      "title": "可选标题",
+      "text": "这段文字会显示在照片下方，并以打字机方式逐字出现。",
+      "typewriter_cps": 14
+    }
+  ]
+}

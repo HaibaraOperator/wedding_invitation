@@ -1,0 +1,70 @@
+{
+  "director_type": "advanced",
+  "level_id": "wedding_map_travel_part_02",
+  "ui": {
+    "document_title": "我们的婚礼故事 · 第二段旅行",
+    "eyebrow": "OUR WEDDING JOURNEY · PART II",
+    "title": "第二段 · 山海与旅途",
+    "loading_message": "载入第二段旅行故事",
+    "start_message": "点击画面，继续第二段旅程"
+  },
+  "map": { "json": "./assets/maps/wedding_map_travel.runtime.json", "image": "./assets/maps/wedding_map_travel.runtime.png", "width": 3360, "height": 480, "ground_y": 416, "cell_width": 16, "cell_height": 32 },
+  "player_start": { "x": 64, "y": 368, "form": "BIG" },
+  "chapter_transition": { "cinematic":"flag_train_tour", "next_level":"home", "message":"乘上高铁，驶向归家篇章" },
+  "camera": { "follow_player": true, "parallax_background": false, "player_screen_ratio": 0.34, "vertical_mode": "bottom" },
+  "movement": { "run_speed": 132, "gravity": 1100, "normal_jump_velocity": 455, "hold_jump_acceleration": 560, "max_hold_duration": 0.38, "max_jump_height": 230, "stomp_bounce_velocity": 300, "enemy_detection_cells": 2, "enemy_detection_px": 32, "flag_detection_cells": 6, "flag_leap_duration": 1.05, "jump_speed_multiplier": 1.5 },
+  "counter": { "initial_value": "00224", "finish_value": 20261005 },
+  "stop_points": [],
+  "story_events": [
+    { "id":"travel_01","stop_x":592,"reason":"enemy","action":"standard_enemy","target_id":"goomba_41","prompt":"蘑菇怪 · 点击踩踏" },
+    { "id":"travel_02","stop_x":832,"reason":"enemy","action":"standard_enemy","target_id":"goomba_56","prompt":"蘑菇怪 · 点击踩踏" },
+    { "id":"travel_03","stop_x":1024,"reason":"enemy","action":"standard_enemy","target_id":"goomba_68","prompt":"蘑菇怪 · 点击踩踏" },
+    { "id":"travel_04","stop_x":1280,"reason":"pipe","action":"pipe_jump","pipe_top":[84,9],"landing":[89,13],"prompt":"点击先跃上管道，再跳落到另一侧" },
+    { "id":"travel_05","stop_x":1504,"reason":"enemy","action":"koopa_coin_chain","enemy_ids":["koopa_94","koopa_106"],"coin_id":"coin_95","prompt":"连续踩踏、吃金币并撞飞两只龟壳" },
+    { "id":"travel_07","stop_x":2048,"reason":"question_block","action":"cat_powerup","target_id":"block_cat","jump_peak":[129,11],"emerge":[129,10],"move_to":[133,9],"prompt":"点击顶格子，让小花猫加入" },
+    { "id":"travel_08","stop_x":2208,"reason":"gallery","action":"linked_gallery","target_id":"block_cat_gallery_a","block_ids":["block_cat_gallery_a","block_cat_gallery_b"],"gallery_id":"cat_gallery","jump_peak":[139,9],"prompt":"点击打开小花猫相册" },
+    { "id":"travel_09","stop_x":2272,"reason":"gallery","action":"linked_gallery","target_id":"block_travel_gallery","block_ids":["block_travel_gallery"],"gallery_id":"travel_gallery_1","jump_peak":[143,9],"prompt":"点击翻开求婚旅行" },
+    { "id":"travel_10","stop_x":2336,"reason":"gallery","action":"linked_gallery","target_id":"block_travel_gallery_b","block_ids":["block_travel_gallery_b","block_travel_gallery_c"],"gallery_id":"travel_gallery_2","jump_peak":[147,9],"prompt":"点击继续旅行相册" },
+    { "id":"travel_11","stop_x":2784,"reason":"enemy","action":"bowser_five","target_id":"bowser_174","prompt":"点击连续踩踏库巴五次" },
+    { "id":"travel_12","stop_x":3040,"reason":"gallery","action":"linked_gallery_shower","target_id":"block_hainan_b","block_ids":["block_hainan_a","block_hainan_b","block_hainan_c","block_hainan_d"],"gallery_id":"hainan_gallery","jump_peak":[191,11],"prompt":"点击顶格子，让金币与红心落下" },
+    { "id":"travel_13","stop_x":3136,"reason":"exit","action":"castle_exit","fade_from":[197,13],"fade_to":[201,13],"prompt":"点击走入终点城堡" }
+  ],
+  "question_blocks": [
+    { "id":"block_cat","column":128,"row":8,"content_type":"empty" },
+    { "id":"block_cat_gallery_a","column":138,"row":6,"content_type":"empty" },
+    { "id":"block_cat_gallery_b","column":140,"row":6,"content_type":"empty" },
+    { "id":"block_travel_gallery","column":142,"row":6,"content_type":"empty" },
+    { "id":"block_travel_gallery_b","column":146,"row":6,"content_type":"empty" },
+    { "id":"block_travel_gallery_c","column":144,"row":6,"content_type":"empty" },
+    { "id":"block_hainan_a","column":190,"row":7,"content_type":"empty" },
+    { "id":"block_hainan_b","column":190,"row":8,"content_type":"empty" },
+    { "id":"block_hainan_c","column":192,"row":7,"content_type":"empty" },
+    { "id":"block_hainan_d","column":192,"row":8,"content_type":"empty" }
+  ],
+  "photos": [],
+  "galleries": [
+    { "id":"cat_gallery","text":"原来那只茶杯猫是不养了吗？！","photos":[
+      {"photo_path":"./assets/photos/cat_1.jpg","counter_value":"00588"}, {"photo_path":"./assets/photos/cat_2.jpg","counter_value":"00588"}
+    ]},
+    { "id":"travel_gallery_1","text":"She said YES!\n羊驼宝宝：We said yes too！","photos":[
+      {"photo_path":"./assets/photos/travel_1.jpg","counter_value":"00914"}, {"photo_path":"./assets/photos/travel_4.jpg","counter_value":"00914"}
+    ]},
+    { "id":"travel_gallery_2","text":"想你的风终于还是吹到了……\n太俗了，换一句\n我想你的中风终于还是到了\n？情话可以偏门，但不可以邪门。","photos":[
+      {"photo_path":"./assets/photos/travel_2.jpg","counter_value":"00915"}, {"photo_path":"./assets/photos/travel_3.jpg","counter_value":"00915"}
+    ]},
+    { "id":"hainan_gallery","text":"","photos":[
+      {"photo_path":"./assets/photos/hainan_1.jpg","caption":"走过 路过 没错过"},{"photo_path":"./assets/photos/hainan_2.jpg"},{"photo_path":"./assets/photos/hainan_3.jpg","caption":"你瞅啥"},{"photo_path":"./assets/photos/hainan_4.jpg","caption":"瞅你咋地"},{"photo_path":"./assets/photos/hainan_5.jpg","caption":"人生如逆旅，愿得一心人"}
+    ]}
+  ],
+  "enemies": [
+    {"id":"goomba_41","type":"goomba","x":656,"ground_y":416,"hp":1},
+    {"id":"goomba_56","type":"goomba","x":896,"ground_y":416,"hp":1},
+    {"id":"goomba_68","type":"goomba","x":1088,"ground_y":416,"hp":1},
+    {"id":"koopa_94","type":"koopa","x":1504,"ground_y":416,"hp":2},
+    {"id":"koopa_106","type":"koopa","x":1696,"ground_y":416,"hp":2},
+    {"id":"bowser_174","type":"bowser","x":2784,"ground_y":416,"hp":5}
+  ],
+  "collectibles": [ {"id":"coin_95","column":95,"row":10} ],
+  "flag": { "id":"unused","x":99999,"ground_y":416,"width":64,"height":165 },
+  "debug": { "enabled":false,"draw_colliders":true,"draw_detection_ranges":true,"collision_debug_alpha":0 }
+}

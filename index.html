@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#171a28" />
+    <title>我们的婚礼故事</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">OUR WEDDING JOURNEY</p>
+          <h1>王郅臻与梁晓媛的婚礼故事</h1>
+        </div>
+        <div class="top-actions">
+          <nav class="level-nav" aria-label="选择故事章节">
+            <a href="?level=meet">相遇</a><a href="?level=travel">旅行</a><a href="?level=home">归家</a>
+          </nav>
+          <button id="debug-toggle" type="button" aria-pressed="false">开启调试</button>
+        </div>
+      </header>
+
+      <section id="game-stage" class="game-stage" aria-label="婚礼故事">
+        <canvas id="game-canvas" tabindex="0"></canvas>
+        <div class="hud" aria-live="polite">
+          <span>TOGETHER</span>
+          <strong id="counter-value">0</strong>
+        </div>
+        <div id="status-pill" class="status-pill">点击画面开始奔跑</div>
+        <aside id="debug-overlay" class="debug-overlay" aria-label="调试信息"></aside>
+        <div id="photo-modal" class="photo-modal" hidden aria-modal="true" role="dialog">
+          <div class="photo-card">
+            <p id="photo-title" class="photo-title"></p>
+            <div id="single-photo-content" class="single-photo-content">
+              <img id="photo-image" alt="婚纱照" />
+            </div>
+            <div id="gallery-stage" class="gallery-stage" hidden aria-label="三张照片轮播">
+              <img class="gallery-photo" alt="故乡照片一" />
+              <img class="gallery-photo" alt="故乡照片二" />
+              <img class="gallery-photo" alt="故乡照片三" />
+              <div id="gallery-dots" class="gallery-dots" aria-live="polite"></div>
+            </div>
+            <p id="photo-caption" class="photo-caption"></p>
+          </div>
+        </div>
+        <div id="loading-overlay" class="loading-overlay">
+          <div class="loading-card">
+            <span>载入婚礼故事</span>
+            <progress id="loading-progress" max="100" value="0"></progress>
+            <strong id="loading-label">0%</strong>
+          </div>
+        </div>
+      </section>
+
+      <footer class="help-row">
+        <span>手机：轻触 / 长按</span>
+        <span>电脑：鼠标左键 / 长按</span>
+        <span>调试快捷键：D</span>
+      </footer>
+    </main>
+    <script type="module" src="./src/main.js?v=travel-home-6-audio"></script>
+  </body>
+</html>

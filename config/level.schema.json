@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.wedding.example/level.schema.json",
+  "title": "8-bit Wedding Canvas Level",
+  "type": "object",
+  "required": [
+    "level_id",
+    "map",
+    "player_start",
+    "movement",
+    "counter",
+    "stop_points",
+    "question_blocks",
+    "photos",
+    "enemies",
+    "flag"
+  ],
+  "properties": {
+    "level_id": { "type": "string", "minLength": 1 },
+    "map": {
+      "type": "object",
+      "required": ["json", "image", "width", "height", "ground_y", "cell_width", "cell_height"],
+      "properties": {
+        "json": { "type": "string" },
+        "image": { "type": "string" },
+        "width": { "type": "integer", "minimum": 32, "maximum": 19968, "multipleOf": 32 },
+        "height": { "type": "integer", "minimum": 32, "maximum": 992, "multipleOf": 32 },
+        "ground_y": { "type": "number" },
+        "cell_width": { "const": 16 },
+        "cell_height": { "const": 32 }
+      },
+      "additionalProperties": true
+    },
+    "player_start": {
+      "type": "object",
+      "required": ["x", "y", "form"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "form": { "enum": ["SMALL", "BIG", "FIRE"] }
+      }
+    },
+    "movement": {
+      "type": "object",
+      "required": ["run_speed", "gravity", "normal_jump_velocity", "enemy_detection_cells", "flag_detection_cells"],
+      "properties": {
+        "jump_speed_multiplier": { "type": "number", "minimum": 1 }
+      },
+      "additionalProperties": { "type": "number" }
+    },
+    "counter": {
+      "type": "object",
+      "required": ["initial_value", "finish_value"],
+      "properties": {
+        "initial_value": { "type": ["integer", "string"] },
+        "finish_value": { "type": ["integer", "string"] }
+      }
+    },
+    "stop_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "x", "reason", "target_id"],
+        "properties": {
+          "id": { "type": "string" },
+          "x": { "type": "number" },
+          "reason": { "enum": ["question_block", "enemy", "flag"] },
+          "target_id": { "type": "string" }
+        }
+      }
+    },
+    "question_blocks": { "type": "array" },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "photo_path", "days_together"],
+        "properties": {
+          "id": { "type": "string" },
+          "photo_path": { "type": "string" },
+          "days_together": { "type": ["integer", "string"] },
+          "fit": { "enum": ["contain", "cover"] },
+          "title": { "type": "string" },
+          "text": { "type": "string" },
+          "typewriter_cps": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    },
+    "enemies": { "type": "array" },
+    "flag": { "type": "object" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,1189 @@
+{
+  "director_type": "advanced",
+  "level_id": "wedding_map_home_part_03",
+  "ui": {
+    "document_title": "我们的婚礼故事 · 第三段归家",
+    "eyebrow": "OUR WEDDING JOURNEY · PART III",
+    "title": "第三段 · 归家与相守",
+    "loading_message": "载入第三段归家故事",
+    "start_message": "点击画面，踏上归家旅程"
+  },
+  "map": {
+    "json": "./assets/maps/wedding_map_home.runtime.json",
+    "image": "./assets/maps/wedding_map_home.runtime.png",
+    "width": 6720,
+    "height": 480,
+    "ground_y": 416,
+    "cell_width": 16,
+    "cell_height": 32
+  },
+  "player_start": {
+    "x": 0,
+    "y": 368,
+    "form": "BIG"
+  },
+  "camera": {
+    "follow_player": true,
+    "parallax_background": false,
+    "player_screen_ratio": 0.34,
+    "vertical_mode": "bottom"
+  },
+  "movement": {
+    "run_speed": 132,
+    "gravity": 1100,
+    "normal_jump_velocity": 455,
+    "hold_jump_acceleration": 560,
+    "max_hold_duration": 0.38,
+    "max_jump_height": 240,
+    "stomp_bounce_velocity": 300,
+    "enemy_detection_cells": 2,
+    "enemy_detection_px": 32,
+    "flag_detection_cells": 6,
+    "flag_leap_duration": 1.05,
+    "jump_speed_multiplier": 1.5
+  },
+  "counter": {
+    "initial_value": "00224",
+    "finish_value": 20261005
+  },
+  "stop_points": [],
+  "story_events": [
+    {
+      "id": "home_01",
+      "stop_x": 272,
+      "reason": "enemy",
+      "action": "bowser_five",
+      "target_id": "bowser_17",
+      "prompt": "点击连续踩踏库巴"
+    },
+    {
+      "id": "home_02",
+      "stop_x": 352,
+      "reason": "question",
+      "action": "mentor_intro",
+      "target_id": "block_mentor",
+      "prompt": "点击迎接博士导师"
+    },
+    {
+      "id": "home_03",
+      "stop_x": 480,
+      "reason": "coin",
+      "action": "collect_coin_jump",
+      "coin_id": "coin_31",
+      "prompt": "点击跳跃吃金币"
+    },
+    {
+      "id": "home_04",
+      "stop_x": 576,
+      "reason": "coin",
+      "action": "collect_coin_jump",
+      "coin_id": "coin_37",
+      "prompt": "点击跳跃吃金币"
+    },
+    {
+      "id": "home_05",
+      "stop_x": 672,
+      "reason": "coin",
+      "action": "collect_coin_jump",
+      "coin_id": "coin_43",
+      "prompt": "点击跳跃吃金币"
+    },
+    {
+      "id": "home_06",
+      "stop_x": 768,
+      "reason": "coin",
+      "action": "collect_coin_jump",
+      "coin_id": "coin_49",
+      "prompt": "点击跳跃吃金币"
+    },
+    {
+      "id": "home_07",
+      "stop_x": 864,
+      "reason": "question",
+      "action": "cap_powerup",
+      "target_id": "block_cap",
+      "prompt": "点击收下博士帽"
+    },
+    {
+      "id": "home_08a",
+      "stop_x": 1088,
+      "reason": "koopa",
+      "action": "koopa_first_stomp",
+      "target_id": "koopa_79",
+      "prompt": "点击第一次踩踏乌龟"
+    },
+    {
+      "id": "home_08b",
+      "stop_x": 1232,
+      "reason": "koopa",
+      "action": "koopa_shell_launch",
+      "target_id": "koopa_79",
+      "prompt": "再次点击，把龟壳击飞"
+    },
+    {
+      "id": "home_08c",
+      "stop_x": 1328,
+      "reason": "jump",
+      "action": "scripted_jump",
+      "landing": [
+        93,
+        13
+      ],
+      "arc": 112,
+      "prompt": "点击跃过下一段路"
+    },
+    {
+      "id": "home_11",
+      "stop_x": 1760,
+      "reason": "enemy",
+      "action": "standard_enemy",
+      "target_id": "goomba_114",
+      "prompt": "蘑菇怪 · 点击踩踏"
+    },
+    {
+      "id": "home_12",
+      "stop_x": 1856,
+      "reason": "enemy",
+      "action": "standard_enemy",
+      "target_id": "goomba_120",
+      "prompt": "蘑菇怪 · 点击踩踏"
+    },
+    {
+      "id": "home_13",
+      "stop_x": 1952,
+      "reason": "pipe",
+      "action": "pipe_piranha",
+      "enemy_id": "piranha_home",
+      "prompt": "点击跃上管道并落到食人花前"
+    },
+    {
+      "id": "home_14a",
+      "stop_x": 2144,
+      "reason": "flower",
+      "action": "flower_collect",
+      "target_id": "block_fire_flower",
+      "jump_peak": [
+        135,
+        9
+      ],
+      "prompt": "长按跳跃顶格子并取得火焰花"
+    },
+    {
+      "id": "home_14b",
+      "stop_x": 2144,
+      "reason": "piranha",
+      "action": "fire_piranha",
+      "enemy_id": "piranha_home",
+      "prompt": "点击投掷火焰击飞食人花"
+    },
+    {
+      "id": "home_15",
+      "stop_x": 2256,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_marry_1",
+      "block_ids": [
+        "block_marry_1"
+      ],
+      "gallery_id": "marry_1",
+      "jump_peak": [
+        142,
+        9
+      ],
+      "after_form": "COUPLE_CAT",
+      "prompt": "长按跳跃打开第一张婚礼照片"
+    },
+    {
+      "id": "home_16",
+      "stop_x": 2368,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_marry_2",
+      "block_ids": [
+        "block_marry_2"
+      ],
+      "gallery_id": "marry_2",
+      "jump_peak": [
+        149,
+        9
+      ],
+      "prompt": "长按跳跃继续相册"
+    },
+    {
+      "id": "home_17",
+      "stop_x": 2560,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_marry_3",
+      "block_ids": [
+        "block_marry_3"
+      ],
+      "gallery_id": "marry_3",
+      "jump_peak": [
+        161,
+        12
+      ],
+      "prompt": "点击继续相册"
+    },
+    {
+      "id": "home_18",
+      "stop_x": 2688,
+      "reason": "jump",
+      "action": "form_jump",
+      "landing": [
+        175,
+        13
+      ],
+      "form": "COUPLE_FIRE",
+      "prompt": "点击并肩跃向下一段"
+    },
+    {
+      "id": "home_19",
+      "stop_x": 2912,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_japan_1",
+      "block_ids": [
+        "block_japan_1"
+      ],
+      "gallery_id": "japan_1",
+      "jump_peak": [
+        183,
+        9
+      ],
+      "prompt": "长按跳跃打开日本篇章"
+    },
+    {
+      "id": "home_20",
+      "stop_x": 3024,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_japan_2",
+      "block_ids": [
+        "block_japan_2"
+      ],
+      "gallery_id": "japan_2",
+      "jump_peak": [
+        190,
+        12
+      ],
+      "prompt": "点击跳跃打开雪线篇章"
+    },
+    {
+      "id": "home_21",
+      "stop_x": 3120,
+      "reason": "coin",
+      "action": "coin_pop",
+      "target_id": "block_japan_coin",
+      "jump_peak": [
+        196,
+        12
+      ],
+      "prompt": "点击顶格子弹出金币"
+    },
+    {
+      "id": "home_22",
+      "stop_x": 3216,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_japan_3",
+      "block_ids": [
+        "block_japan_3"
+      ],
+      "gallery_id": "japan_3",
+      "jump_peak": [
+        202,
+        12
+      ],
+      "prompt": "点击跳跃收藏富士山"
+    },
+    {
+      "id": "home_23",
+      "stop_x": 3296,
+      "reason": "transition",
+      "action": "balloon_transition",
+      "waypoints": [
+        [
+          213,
+          11
+        ],
+        [
+          219,
+          8
+        ],
+        [
+          222,
+          5
+        ]
+      ],
+      "prompt": "点击完成三段跳，乘热气球进入下一幕"
+    },
+    {
+      "id": "home_25",
+      "stop_x": 4096,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_turkey_1",
+      "block_ids": [
+        "block_turkey_1"
+      ],
+      "gallery_id": "turkey_1",
+      "jump_peak": [
+        257,
+        12
+      ],
+      "prompt": "点击打开土耳其篇章"
+    },
+    {
+      "id": "home_26",
+      "stop_x": 4192,
+      "reason": "coin",
+      "action": "coin_pop",
+      "target_id": "block_coin_pop",
+      "jump_peak": [
+        263,
+        12
+      ],
+      "prompt": "点击顶出金币"
+    },
+    {
+      "id": "home_27",
+      "stop_x": 4288,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_turkey_2",
+      "block_ids": [
+        "block_turkey_2"
+      ],
+      "gallery_id": "turkey_2",
+      "jump_peak": [
+        269,
+        12
+      ],
+      "prompt": "点击继续土耳其篇章"
+    },
+    {
+      "id": "home_28a",
+      "stop_x": 4384,
+      "reason": "perch",
+      "action": "jump_to_perch",
+      "landing": [
+        282,
+        9
+      ],
+      "arc": 104,
+      "prompt": "点击跃上第一个高台"
+    },
+    {
+      "id": "home_28b",
+      "stop_x": 4496,
+      "reason": "gallery",
+      "action": "perch_gallery",
+      "target_id": "block_turkey_3",
+      "gallery_id": "turkey_3",
+      "landing": [
+        282,
+        9
+      ],
+      "jump_peak": [
+        282,
+        7
+      ],
+      "prompt": "点击顶格子浏览宝宝巴士相册"
+    },
+    {
+      "id": "home_28c",
+      "stop_x": 4496,
+      "reason": "perch",
+      "action": "jump_to_perch",
+      "landing": [
+        294,
+        9
+      ],
+      "arc": 104,
+      "prompt": "点击跃上第二个高台"
+    },
+    {
+      "id": "home_28d",
+      "stop_x": 4688,
+      "reason": "gallery",
+      "action": "perch_gallery",
+      "target_id": "block_turkey_4",
+      "gallery_id": "turkey_4",
+      "landing": [
+        294,
+        9
+      ],
+      "jump_peak": [
+        294,
+        7
+      ],
+      "prompt": "点击顶格子继续土耳其相册"
+    },
+    {
+      "id": "home_29a",
+      "stop_x": 4688,
+      "reason": "fire",
+      "action": "bowser_fire_hit",
+      "target_id": "bowser_304",
+      "hit_index": 1,
+      "prompt": "点击投掷第一枚火焰"
+    },
+    {
+      "id": "home_29b",
+      "stop_x": 4688,
+      "reason": "fire",
+      "action": "bowser_fire_hit",
+      "target_id": "bowser_304",
+      "hit_index": 2,
+      "prompt": "点击投掷第二枚火焰"
+    },
+    {
+      "id": "home_29c",
+      "stop_x": 4688,
+      "reason": "fire",
+      "action": "bowser_fire_hit",
+      "target_id": "bowser_304",
+      "hit_index": 3,
+      "prompt": "点击投掷第三枚火焰"
+    },
+    {
+      "id": "home_29d",
+      "stop_x": 4688,
+      "reason": "bus",
+      "action": "board_bus",
+      "goomba_ids": [
+        "goomba_321",
+        "goomba_327",
+        "goomba_333"
+      ],
+      "trigger_columns": [
+        318,
+        324,
+        330
+      ],
+      "prompt": "点击跳下高台，登上宝宝巴士"
+    },
+    {
+      "id": "home_30",
+      "stop_x": 5408,
+      "reason": "gallery",
+      "action": "linked_gallery",
+      "target_id": "block_turkey_5",
+      "block_ids": [
+        "block_turkey_5"
+      ],
+      "gallery_id": "turkey_5",
+      "jump_peak": [
+        339,
+        12
+      ],
+      "after_form": "COUPLE",
+      "prompt": "点击顶格子打开下车后的照片"
+    },
+    {
+      "id": "home_31",
+      "stop_x": 5520,
+      "reason": "jump",
+      "action": "chain_jump",
+      "waypoints": [
+        [
+          351,
+          13
+        ]
+      ],
+      "prompt": "点击越过砖块"
+    },
+    {
+      "id": "home_32",
+      "stop_x": 5696,
+      "reason": "proposal",
+      "action": "proposal",
+      "target_id": "block_proposal",
+      "anchor": [
+        357,
+        13
+      ],
+      "prompt": "点击开启求婚动画"
+    },
+    {
+      "id": "home_33",
+      "stop_x": 5920,
+      "reason": "celebration",
+      "action": "shower_gallery",
+      "block_ids": [
+        "cage_01",
+        "cage_02",
+        "cage_03",
+        "cage_04",
+        "cage_05",
+        "cage_06",
+        "cage_07",
+        "cage_08",
+        "cage_09",
+        "cage_10",
+        "cage_11",
+        "cage_12",
+        "cage_13",
+        "cage_14",
+        "cage_15",
+        "cage_16",
+        "cage_17",
+        "cage_18"
+      ],
+      "gallery_id": "wedding_gallery",
+      "prompt": "点击让十八个格子抖动并洒下金币红心"
+    },
+    {
+      "id": "home_34",
+      "stop_x": 6144,
+      "reason": "split",
+      "action": "split_departure",
+      "prompt": "点击目送新娘先行"
+    },
+    {
+      "id": "home_35",
+      "stop_x": 6144,
+      "reason": "stairs",
+      "action": "stair_photo",
+      "target_id": "stair_block_1",
+      "landing": [
+        389,
+        12
+      ],
+      "gallery_id": "stair_14",
+      "prompt": "点击登上第一阶"
+    },
+    {
+      "id": "home_36",
+      "stop_x": 6208,
+      "reason": "stairs",
+      "action": "stair_photo",
+      "target_id": "stair_block_2",
+      "landing": [
+        391,
+        11
+      ],
+      "gallery_id": "stair_15",
+      "prompt": "点击登上第二阶"
+    },
+    {
+      "id": "home_37",
+      "stop_x": 6240,
+      "reason": "stairs",
+      "action": "stair_photo",
+      "target_id": "stair_block_3",
+      "landing": [
+        393,
+        10
+      ],
+      "gallery_id": "stair_16",
+      "prompt": "点击登上第三阶"
+    },
+    {
+      "id": "home_38",
+      "stop_x": 6272,
+      "reason": "stairs",
+      "action": "stair_photo",
+      "target_id": "stair_block_4",
+      "landing": [
+        395,
+        9
+      ],
+      "gallery_id": "stair_17",
+      "prompt": "点击登上第四阶"
+    },
+    {
+      "id": "home_39",
+      "stop_x": 6304,
+      "reason": "stairs",
+      "action": "stair_photo",
+      "target_id": "stair_block_5",
+      "landing": [
+        397,
+        8
+      ],
+      "gallery_id": "stair_18",
+      "prompt": "点击登上最后一阶"
+    },
+    {
+      "id": "home_40",
+      "stop_x": 6336,
+      "reason": "finale",
+      "action": "heart_finale",
+      "prompt": "长按三秒让红心满格，再跃向旗杆顶部"
+    }
+  ],
+  "question_blocks": [
+    {
+      "id": "block_mentor",
+      "column": 22,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_cap",
+      "column": 54,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_marry_1",
+      "column": 141,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_marry_2",
+      "column": 148,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_marry_3",
+      "column": 160,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_japan_1",
+      "column": 182,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_japan_2",
+      "column": 189,
+      "row": 9,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_japan_3",
+      "column": 201,
+      "row": 9,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_turkey_1",
+      "column": 256,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_coin_pop",
+      "column": 262,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_turkey_2",
+      "column": 268,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_turkey_3",
+      "column": 281,
+      "row": 4,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_turkey_4",
+      "column": 293,
+      "row": 4,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_turkey_5",
+      "column": 338,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_proposal",
+      "column": 356,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_01",
+      "column": 372,
+      "row": 9,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_02",
+      "column": 374,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_03",
+      "column": 366,
+      "row": 3,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_04",
+      "column": 370,
+      "row": 3,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_05",
+      "column": 374,
+      "row": 3,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_06",
+      "column": 378,
+      "row": 3,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_07",
+      "column": 364,
+      "row": 4,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_08",
+      "column": 372,
+      "row": 4,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_09",
+      "column": 380,
+      "row": 4,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_10",
+      "column": 365,
+      "row": 5,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_11",
+      "column": 379,
+      "row": 5,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_12",
+      "column": 367,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_13",
+      "column": 377,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_14",
+      "column": 369,
+      "row": 7,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_15",
+      "column": 375,
+      "row": 7,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_16",
+      "column": 370,
+      "row": 8,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_17",
+      "column": 368,
+      "row": 2,
+      "content_type": "empty"
+    },
+    {
+      "id": "cage_18",
+      "column": 376,
+      "row": 2,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_fire_flower",
+      "column": 134,
+      "row": 6,
+      "content_type": "empty"
+    },
+    {
+      "id": "block_japan_coin",
+      "column": 195,
+      "row": 9,
+      "content_type": "empty"
+    },
+    {
+      "id": "stair_block_1",
+      "column": 388,
+      "row": 12,
+      "content_type": "empty"
+    },
+    {
+      "id": "stair_block_2",
+      "column": 390,
+      "row": 11,
+      "content_type": "empty"
+    },
+    {
+      "id": "stair_block_3",
+      "column": 392,
+      "row": 10,
+      "content_type": "empty"
+    },
+    {
+      "id": "stair_block_4",
+      "column": 394,
+      "row": 9,
+      "content_type": "empty"
+    },
+    {
+      "id": "stair_block_5",
+      "column": 396,
+      "row": 8,
+      "content_type": "empty"
+    }
+  ],
+  "photos": [],
+  "galleries": [
+    {
+      "id": "marry_1",
+      "text": "与你在一起的一千天，我们许下一生的承诺。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/marry_1.jpg",
+          "counter_value": "01000"
+        }
+      ]
+    },
+    {
+      "id": "marry_2",
+      "text": "主打一个夫妻相\n梁晓媛：这是对我最大的侮辱",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/marry_2.jpg",
+          "counter_value": "01000"
+        }
+      ]
+    },
+    {
+      "id": "marry_3",
+      "text": "一日三餐，有你有我。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/marry_3.jpg",
+          "counter_value": "01000"
+        }
+      ]
+    },
+    {
+      "id": "japan_1",
+      "text": "晚来天欲雪 能饮一杯无。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/japan_3.jpg",
+          "counter_value": "01120"
+        },
+        {
+          "photo_path": "./assets/photos/japan_1.jpg",
+          "counter_value": "01120"
+        }
+      ]
+    },
+    {
+      "id": "japan_2",
+      "text": "轻伤不用下火线，腿着也要爬雪线。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/japan_2.jpg",
+          "counter_value": "01122"
+        },
+        {
+          "photo_path": "./assets/photos/japan_4.jpg",
+          "counter_value": "01122"
+        }
+      ]
+    },
+    {
+      "id": "japan_3",
+      "text": "万花筒中的富士山。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/japan_5.jpg",
+          "counter_value": "01122"
+        },
+        {
+          "photo_path": "./assets/photos/japan_7.jpg",
+          "counter_value": "01122"
+        },
+        {
+          "photo_path": "./assets/photos/japan_6.jpg",
+          "counter_value": "01122"
+        }
+      ]
+    },
+    {
+      "id": "turkey_1",
+      "text": "拥抱天地，拥抱你。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/turkey_1.jpg",
+          "counter_value": "01289"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_2.jpg",
+          "counter_value": "01289"
+        }
+      ]
+    },
+    {
+      "id": "turkey_2",
+      "text": "我想带你去那浪漫的土耳其。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/turkey_3.jpg",
+          "counter_value": "01290"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_4.jpg",
+          "counter_value": "01290"
+        }
+      ]
+    },
+    {
+      "id": "turkey_3",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/turkey_8.jpg",
+          "counter_value": "01290",
+          "caption": "墨镜一戴，谁都不爱。"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_9.jpg",
+          "counter_value": "01290",
+          "caption": "引擎一响，爹娘白养。"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_10.jpg",
+          "counter_value": "01290",
+          "caption": "满嘴顺口溜，你要考研呐？。"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_12.jpg",
+          "counter_value": "01290",
+          "caption": "不好意思，我已经是博士了。"
+        }
+      ]
+    },
+    {
+      "id": "turkey_4",
+      "text": "虽然是牛马，但愿相聚在罗马。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/turkey_5.jpg",
+          "counter_value": "01291"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_6.jpg",
+          "counter_value": "01291"
+        }
+      ]
+    },
+    {
+      "id": "turkey_5",
+      "text": "想文案想到力竭了，就先给大家比个心吧[笔芯]。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/turkey_7.jpg",
+          "counter_value": "01294"
+        },
+        {
+          "photo_path": "./assets/photos/turkey_11.jpg",
+          "counter_value": "01294"
+        }
+      ]
+    },
+    {
+      "id": "wedding_gallery",
+      "text": "几度花开，几度花落。\n执子之手，共赴白头。\n我们把平凡日子写成答案，也把一路山海装进今天。",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_1.jpg",
+          "counter_value": "01314"
+        },
+        {
+          "photo_path": "./assets/photos/weddingphoto_2.jpg",
+          "counter_value": "01314"
+        }
+      ]
+    },
+    {
+      "id": "stair_14",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_14.png",
+          "counter_value": "09999"
+        }
+      ]
+    },
+    {
+      "id": "stair_15",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_15.png",
+          "counter_value": "09999"
+        }
+      ]
+    },
+    {
+      "id": "stair_16",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_16.png",
+          "counter_value": "09999"
+        }
+      ]
+    },
+    {
+      "id": "stair_17",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_17.JPG",
+          "counter_value": "09999"
+        }
+      ]
+    },
+    {
+      "id": "stair_18",
+      "text": "",
+      "photos": [
+        {
+          "photo_path": "./assets/photos/weddingphoto_18.PNG",
+          "counter_value": "09999"
+        }
+      ]
+    }
+  ],
+  "enemies": [
+    {
+      "id": "bowser_17",
+      "type": "bowser",
+      "x": 272,
+      "ground_y": 416,
+      "hp": 5
+    },
+    {
+      "id": "koopa_79",
+      "type": "koopa",
+      "x": 1264,
+      "ground_y": 416,
+      "hp": 2
+    },
+    {
+      "id": "goomba_114",
+      "type": "goomba",
+      "x": 1824,
+      "ground_y": 416,
+      "hp": 1
+    },
+    {
+      "id": "goomba_120",
+      "type": "goomba",
+      "x": 1920,
+      "ground_y": 416,
+      "hp": 1
+    },
+    {
+      "id": "piranha_home",
+      "type": "piranha",
+      "x": 2032,
+      "y": 384,
+      "hidden_y": 384,
+      "target_y": 256,
+      "reveal_clip_y": 384,
+      "ground_y": 416,
+      "state": "HIDDEN",
+      "hp": 1
+    },
+    {
+      "id": "bowser_304",
+      "type": "bowser",
+      "x": 4864,
+      "ground_y": 416,
+      "hp": 3
+    },
+    {
+      "id": "goomba_321",
+      "type": "goomba",
+      "x": 5136,
+      "ground_y": 416,
+      "hp": 1
+    },
+    {
+      "id": "goomba_327",
+      "type": "goomba",
+      "x": 5232,
+      "ground_y": 416,
+      "hp": 1
+    },
+    {
+      "id": "goomba_333",
+      "type": "goomba",
+      "x": 5328,
+      "ground_y": 416,
+      "hp": 1
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "coin_31",
+      "column": 31,
+      "row": 9
+    },
+    {
+      "id": "coin_37",
+      "column": 37,
+      "row": 9
+    },
+    {
+      "id": "coin_43",
+      "column": 43,
+      "row": 9
+    },
+    {
+      "id": "coin_49",
+      "column": 49,
+      "row": 9
+    }
+  ],
+  "flag": {
+    "id": "home_flag",
+    "x": 6448,
+    "ground_y": 416,
+    "width": 64,
+    "height": 165
+  },
+  "debug": {
+    "enabled": false,
+    "draw_colliders": true,
+    "draw_detection_ranges": true,
+    "collision_debug_alpha": 0
+  }
+}

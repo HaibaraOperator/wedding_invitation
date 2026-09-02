@@ -1,0 +1,108 @@
+{
+  "$schema": "./level.schema.json",
+  "level_id": "test_level_01",
+  "map": {
+    "json": "./assets/maps/test_level.map.json",
+    "image": "./assets/maps/test_level.png",
+    "width": 2048,
+    "height": 640,
+    "ground_y": 608,
+    "cell_width": 16,
+    "cell_height": 32
+  },
+  "player_start": {
+    "x": 64,
+    "y": 576,
+    "form": "SMALL"
+  },
+  "camera": {
+    "follow_player": true,
+    "parallax_background": false,
+    "player_screen_ratio": 0.34,
+    "vertical_mode": "bottom"
+  },
+  "movement": {
+    "run_speed": 150,
+    "gravity": 1100,
+    "normal_jump_velocity": 430,
+    "hold_jump_acceleration": 520,
+    "max_hold_duration": 0.35,
+    "max_jump_height": 150,
+    "stomp_bounce_velocity": 280,
+    "enemy_detection_cells": 6,
+    "flag_detection_cells": 6,
+    "flag_leap_duration": 1.05
+  },
+  "counter": {
+    "initial_value": 0,
+    "finish_value": 20261005
+  },
+  "stop_points": [
+    {
+      "id": "photo_stop",
+      "x": 512,
+      "reason": "question_block",
+      "target_id": "photo_block_01"
+    },
+    {
+      "id": "enemy_stop",
+      "x": 968,
+      "reason": "enemy",
+      "target_id": "goomba_01"
+    },
+    {
+      "id": "flag_stop",
+      "x": 1616,
+      "reason": "flag",
+      "target_id": "finish_flag"
+    }
+  ],
+  "question_blocks": [
+    {
+      "id": "photo_block_01",
+      "column": 32,
+      "row": 15,
+      "content_type": "photo",
+      "photo_id": "wedding_photo_01",
+      "activated": false
+    }
+  ],
+  "photos": [
+    {
+      "id": "wedding_photo_01",
+      "photo_path": "./assets/photos/test_wedding_photo.jpg",
+      "days_together": 1000,
+      "fit": "contain",
+      "title": "我们的婚纱照",
+      "text": "从这一刻起，故事仍在继续。再次点击，和我一起向终点出发。",
+      "typewriter_cps": 14
+    }
+  ],
+  "enemies": [
+    {
+      "id": "goomba_01",
+      "type": "goomba",
+      "x": 1056,
+      "ground_y": 608,
+      "state": "ACTIVE",
+      "hp": 1
+    }
+  ],
+  "flag": {
+    "id": "finish_flag",
+    "material_id": "005",
+    "x": 1696,
+    "ground_y": 608,
+    "width": 64,
+    "height": 165,
+    "detection_cells": 6,
+    "finish_value": 20261005,
+    "test_mode_stop_at_top": true
+  },
+  "debug": {
+    "enabled": false,
+    "draw_colliders": true,
+    "draw_detection_ranges": true,
+    "collision_debug_alpha": 0
+  }
+}

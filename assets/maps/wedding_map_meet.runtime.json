@@ -1,0 +1,8830 @@
+{
+  "meta": {
+    "format": "8bit_wedding_map",
+    "version": "1.2.0-test",
+    "generated_at": "2026-09-01T20:08:54.731256+00:00",
+    "cell_size": {
+      "width": 16,
+      "height": 32
+    },
+    "map_dimension_multiple": 32,
+    "anchor": "bottom_left_cell",
+    "catalog": "materials_catalog.json",
+    "automatic_background": {
+      "enabled": true,
+      "layer": "environment_background",
+      "collision": false,
+      "allows_overlap": true,
+      "parallax": false,
+      "seed": 1020447100,
+      "sky_color": "#5C94FC",
+      "elements": [
+        {
+          "kind": "hill",
+          "x": -48,
+          "baseline_y": 448,
+          "width": 160,
+          "height": 96,
+          "variant": 1
+        },
+        {
+          "kind": "hill",
+          "x": 240,
+          "baseline_y": 448,
+          "width": 192,
+          "height": 80,
+          "variant": 1
+        },
+        {
+          "kind": "hill",
+          "x": 592,
+          "baseline_y": 448,
+          "width": 256,
+          "height": 112,
+          "variant": 2
+        },
+        {
+          "kind": "hill",
+          "x": 1040,
+          "baseline_y": 448,
+          "width": 256,
+          "height": 96,
+          "variant": 0
+        },
+        {
+          "kind": "hill",
+          "x": 1488,
+          "baseline_y": 448,
+          "width": 192,
+          "height": 128,
+          "variant": 0
+        },
+        {
+          "kind": "hill",
+          "x": 1872,
+          "baseline_y": 448,
+          "width": 256,
+          "height": 128,
+          "variant": 0
+        },
+        {
+          "kind": "hill",
+          "x": 2288,
+          "baseline_y": 448,
+          "width": 192,
+          "height": 80,
+          "variant": 0
+        },
+        {
+          "kind": "hill",
+          "x": 2672,
+          "baseline_y": 448,
+          "width": 192,
+          "height": 128,
+          "variant": 0
+        },
+        {
+          "kind": "hill",
+          "x": 3024,
+          "baseline_y": 448,
+          "width": 192,
+          "height": 128,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": -16,
+          "baseline_y": 448,
+          "width": 64,
+          "height": 48,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 256,
+          "baseline_y": 448,
+          "width": 64,
+          "height": 48,
+          "variant": 1
+        },
+        {
+          "kind": "tree",
+          "x": 496,
+          "baseline_y": 448,
+          "width": 80,
+          "height": 64,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 688,
+          "baseline_y": 448,
+          "width": 64,
+          "height": 72,
+          "variant": 1
+        },
+        {
+          "kind": "tree",
+          "x": 992,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 64,
+          "variant": 0
+        },
+        {
+          "kind": "tree",
+          "x": 1328,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 48,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 1664,
+          "baseline_y": 448,
+          "width": 64,
+          "height": 72,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 1936,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 72,
+          "variant": 0
+        },
+        {
+          "kind": "tree",
+          "x": 2144,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 64,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 2416,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 72,
+          "variant": 2
+        },
+        {
+          "kind": "tree",
+          "x": 2752,
+          "baseline_y": 448,
+          "width": 96,
+          "height": 48,
+          "variant": 0
+        },
+        {
+          "kind": "tree",
+          "x": 2960,
+          "baseline_y": 448,
+          "width": 80,
+          "height": 72,
+          "variant": 1
+        },
+        {
+          "kind": "tree",
+          "x": 3248,
+          "baseline_y": 448,
+          "width": 64,
+          "height": 56,
+          "variant": 2
+        }
+      ]
+    }
+  },
+  "map": {
+    "width": 3360,
+    "height": 480,
+    "columns": 210,
+    "rows": 15
+  },
+  "placements": [
+    {
+      "material_id": "010",
+      "column": 2,
+      "row": 12,
+      "layer": "background",
+      "key": "trinity_college_wedding_castle",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 32,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "footprint": {
+        "columns": 10,
+        "rows": 5
+      },
+      "representative_frame": "trinity_college_wedding_castle",
+      "frames": [
+        {
+          "name": "trinity_college_wedding_castle",
+          "file": "scenes/frames/trinity_college_wedding_castle.png",
+          "width": 160,
+          "height": 160,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "026",
+      "column": 4,
+      "row": 12,
+      "layer": "background",
+      "key": "flag_ireland",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 64,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 64,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 4,
+        "rows": 2
+      },
+      "representative_frame": "flag_ireland",
+      "frames": [
+        {
+          "name": "flag_ireland",
+          "file": "scenes/frames/flag_ireland.png",
+          "width": 64,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "011",
+      "column": 99,
+      "row": 12,
+      "layer": "background",
+      "key": "bristol_cathedral",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 1584,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "footprint": {
+        "columns": 10,
+        "rows": 5
+      },
+      "representative_frame": "bristol_cathedral",
+      "frames": [
+        {
+          "name": "bristol_cathedral",
+          "file": "scenes/frames/bristol_cathedral.png",
+          "width": 160,
+          "height": 160,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "025",
+      "column": 100,
+      "row": 12,
+      "layer": "background",
+      "key": "flag_uk",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 1600,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 64,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 4,
+        "rows": 2
+      },
+      "representative_frame": "flag_uk",
+      "frames": [
+        {
+          "name": "flag_uk",
+          "file": "scenes/frames/flag_uk.png",
+          "width": 64,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "029",
+      "column": 166,
+      "row": 12,
+      "layer": "background",
+      "key": "flag_china",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 2656,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 64,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 4,
+        "rows": 2
+      },
+      "representative_frame": "flag_china",
+      "frames": [
+        {
+          "name": "flag_china",
+          "file": "scenes/frames/flag_china.png",
+          "width": 64,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "023",
+      "column": 172,
+      "row": 12,
+      "layer": "background",
+      "key": "yungang_grottoes_buddha",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 2752,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "footprint": {
+        "columns": 10,
+        "rows": 5
+      },
+      "representative_frame": "yungang_grottoes_buddha",
+      "frames": [
+        {
+          "name": "yungang_grottoes_buddha",
+          "file": "scenes/frames/yungang_grottoes_buddha.png",
+          "width": 160,
+          "height": 160,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "015",
+      "column": 184,
+      "row": 12,
+      "layer": "background",
+      "key": "orange_isle_mao_statue",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 2944,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "footprint": {
+        "columns": 10,
+        "rows": 5
+      },
+      "representative_frame": "orange_isle_mao_statue",
+      "frames": [
+        {
+          "name": "orange_isle_mao_statue",
+          "file": "scenes/frames/orange_isle_mao_statue.png",
+          "width": 160,
+          "height": 160,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "014",
+      "column": 196,
+      "row": 12,
+      "layer": "background",
+      "key": "chengdu_twin_towers",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 3136,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "footprint": {
+        "columns": 10,
+        "rows": 5
+      },
+      "representative_frame": "chengdu_twin_towers",
+      "frames": [
+        {
+          "name": "chengdu_twin_towers",
+          "file": "scenes/frames/chengdu_twin_towers.png",
+          "width": 160,
+          "height": 160,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "013",
+      "column": 197,
+      "row": 12,
+      "layer": "background",
+      "key": "chengdu_panda",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": true,
+      "pixel_position": {
+        "x": 3152,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 3,
+        "rows": 2
+      },
+      "representative_frame": "chengdu_panda",
+      "frames": [
+        {
+          "name": "chengdu_panda",
+          "file": "scenes/frames/chengdu_panda.png",
+          "width": 48,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 45,
+      "row": 1,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 720,
+        "y_bottom": 64
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 96,
+      "row": 1,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1536,
+        "y_bottom": 64
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 162,
+      "row": 1,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2592,
+        "y_bottom": 64
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 125,
+      "row": 3,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2000,
+        "y_bottom": 128
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 187,
+      "row": 3,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2992,
+        "y_bottom": 128
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 18,
+      "row": 4,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 288,
+        "y_bottom": 160
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "004",
+      "column": 71,
+      "row": 5,
+      "layer": "foreground",
+      "key": "cloud",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1136,
+        "y_bottom": 192
+      },
+      "size": {
+        "width": 96,
+        "height": 48
+      },
+      "footprint": {
+        "columns": 6,
+        "rows": 2
+      },
+      "representative_frame": "cloud",
+      "frames": [
+        {
+          "name": "cloud",
+          "file": "scenes/frames/cloud.png",
+          "width": 96,
+          "height": 48,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 40,
+      "row": 9,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 640,
+        "y_bottom": 320
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 44,
+      "row": 9,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 704,
+        "y_bottom": 320
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 48,
+      "row": 9,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 768,
+        "y_bottom": 320
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 100,
+      "row": 9,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1600,
+        "y_bottom": 320
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 104,
+      "row": 9,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1664,
+        "y_bottom": 320
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "003",
+      "column": 64,
+      "row": 12,
+      "layer": "foreground",
+      "key": "pipe_classic",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1024,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 64,
+        "height": 128
+      },
+      "footprint": {
+        "columns": 4,
+        "rows": 4
+      },
+      "representative_frame": "pipe_classic",
+      "frames": [
+        {
+          "name": "pipe_classic",
+          "file": "scenes/frames/pipe_classic.png",
+          "width": 64,
+          "height": 128,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "003",
+      "column": 82,
+      "row": 12,
+      "layer": "foreground",
+      "key": "pipe_classic",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1312,
+        "y_bottom": 416
+      },
+      "size": {
+        "width": 64,
+        "height": 128
+      },
+      "footprint": {
+        "columns": 4,
+        "rows": 4
+      },
+      "representative_frame": "pipe_classic",
+      "frames": [
+        {
+          "name": "pipe_classic",
+          "file": "scenes/frames/pipe_classic.png",
+          "width": 64,
+          "height": 128,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 0,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 0,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 2,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 32,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 4,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 64,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 6,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 96,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 8,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 128,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 10,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 160,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 12,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 192,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 14,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 224,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 16,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 256,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 18,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 288,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 20,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 320,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 22,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 352,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 24,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 384,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 26,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 416,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 28,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 448,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 30,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 480,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 32,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 512,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 34,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 544,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 36,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 576,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 38,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 608,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 40,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 640,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 42,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 672,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 44,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 704,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 46,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 736,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 48,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 768,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 50,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 800,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 52,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 832,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 54,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 864,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 56,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 896,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 58,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 928,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 60,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 960,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 62,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 992,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 64,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1024,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 66,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1056,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 68,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1088,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 70,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1120,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 72,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1152,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 74,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1184,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 76,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1216,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 78,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1248,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 80,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1280,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 82,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1312,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 84,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1344,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 86,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1376,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 88,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1408,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 90,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1440,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 92,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1472,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 94,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1504,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 96,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1536,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 98,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1568,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 100,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1600,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 102,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1632,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 104,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1664,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 106,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1696,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 108,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1728,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 110,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1760,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 112,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1792,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 114,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1824,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 116,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1856,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 118,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1888,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 120,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1920,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 122,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1952,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 124,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1984,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 126,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2016,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 128,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2048,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 130,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2080,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 132,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2112,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 134,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2144,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 136,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2176,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 138,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2208,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 140,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2240,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 142,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2272,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 144,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2304,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 146,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2336,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 148,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2368,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 150,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2400,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 152,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2432,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 154,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2464,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 156,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2496,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 158,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2528,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 160,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2560,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 162,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2592,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 164,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2624,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 166,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2656,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 168,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2688,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 170,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2720,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 172,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2752,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 174,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2784,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 176,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2816,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 178,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2848,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 180,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2880,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 182,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2912,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 184,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2944,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 186,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2976,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 188,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3008,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 190,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3040,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 192,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3072,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 194,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3104,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 196,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3136,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 198,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3168,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 200,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3200,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 202,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3232,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 204,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3264,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 206,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3296,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 208,
+      "row": 13,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3328,
+        "y_bottom": 448
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 0,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 0,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 2,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 32,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 4,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 64,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 6,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 96,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 8,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 128,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 10,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 160,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 12,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 192,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 14,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 224,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 16,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 256,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 18,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 288,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 20,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 320,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 22,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 352,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 24,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 384,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 26,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 416,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 28,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 448,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 30,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 480,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 32,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 512,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 34,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 544,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 36,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 576,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 38,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 608,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 40,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 640,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 42,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 672,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 44,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 704,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 46,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 736,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 48,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 768,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 50,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 800,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 52,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 832,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 54,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 864,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 56,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 896,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 58,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 928,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 60,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 960,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 62,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 992,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 64,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1024,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 66,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1056,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 68,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1088,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 70,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1120,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 72,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1152,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 74,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1184,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 76,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1216,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 78,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1248,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 80,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1280,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 82,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1312,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 84,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1344,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 86,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1376,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 88,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1408,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 90,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1440,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 92,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1472,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 94,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1504,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 96,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1536,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 98,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1568,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 100,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1600,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 102,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1632,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 104,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1664,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 106,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1696,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 108,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1728,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 110,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1760,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 112,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1792,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 114,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1824,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 116,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1856,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 118,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1888,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 120,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1920,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 122,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1952,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 124,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 1984,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 126,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2016,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 128,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2048,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 130,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2080,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 132,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2112,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 134,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2144,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 136,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2176,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 138,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2208,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 140,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2240,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 142,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2272,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 144,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2304,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 146,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2336,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 148,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2368,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 150,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2400,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 152,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2432,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 154,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2464,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 156,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2496,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 158,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2528,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 160,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2560,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 162,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2592,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 164,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2624,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 166,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2656,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 168,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2688,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 170,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2720,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 172,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2752,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 174,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2784,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 176,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2816,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 178,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2848,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 180,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2880,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 182,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2912,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 184,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2944,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 186,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 2976,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 188,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3008,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 190,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3040,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 192,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3072,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 194,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3104,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 196,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3136,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 198,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3168,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 200,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3200,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 202,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3232,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 204,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3264,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 206,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3296,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    },
+    {
+      "material_id": "001",
+      "column": 208,
+      "row": 14,
+      "layer": "foreground",
+      "key": "brick",
+      "pack": "scenes",
+      "anchor": "bottom_left_cell",
+      "allows_overlap": false,
+      "pixel_position": {
+        "x": 3328,
+        "y_bottom": 480
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "footprint": {
+        "columns": 2,
+        "rows": 1
+      },
+      "representative_frame": "brick",
+      "frames": [
+        {
+          "name": "brick",
+          "file": "scenes/frames/brick.png",
+          "width": 32,
+          "height": 32,
+          "duration_ms": 0,
+          "pivot": {
+            "x": 0.5,
+            "y": 1.0
+          }
+        }
+      ],
+      "animations": []
+    }
+  ]
+}
