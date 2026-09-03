@@ -1,6 +1,7 @@
 {
   "director_type": "advanced",
   "level_id": "wedding_map_home_part_03",
+  "inherit_player_form": false,
   "ui": {
     "document_title": "我们的婚礼故事 · 第三段归家",
     "eyebrow": "OUR WEDDING JOURNEY · PART III",

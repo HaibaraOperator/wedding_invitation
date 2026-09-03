@@ -1,14 +1,14 @@
 import { ASSET_PATHS } from "./constants.js";
-import { AssetLoader } from "./asset-loader.js?v=mobile-media-2";
-import { CounterDisplay } from "./counter-display.js";
+import { AssetLoader } from "./asset-loader.js?v=mobile-media-4";
+import { CounterDisplay } from "./counter-display.js?v=counter-jump-1";
 import { DebugOverlay } from "./debug-overlay.js";
 import { GameLoop } from "./game-loop.js";
 import { WeddingGame } from "./game.js";
 import { InputController } from "./input-controller.js";
 import { LevelConfigLoader, MapLoader } from "./level-config-loader.js";
-import { PhotoSystem } from "./photo-system.js?v=mobile-media-2";
+import { PhotoSystem } from "./photo-system.js?v=mobile-media-4";
 import { Renderer } from "./renderer.js";
-import { AudioSystem } from "./audio-system.js?v=mobile-media-2";
+import { AudioSystem } from "./audio-system.js?v=mobile-media-4";
 
 const elements = {
   canvas: document.querySelector("#game-canvas"),
@@ -119,7 +119,9 @@ async function boot() {
     const serializedTransition = window.sessionStorage.getItem("wedding_story_transition");
     const transfer = serializedTransition ? JSON.parse(serializedTransition) : null;
     if (transfer?.nextLevel === level && transfer.snapshot) {
-      if (transfer.snapshot.form) game.player.setForm(transfer.snapshot.form);
+      if (config.inherit_player_form !== false && transfer.snapshot.form) {
+        game.player.setForm(transfer.snapshot.form);
+      }
       if (transfer.snapshot.counter_value !== undefined) counter.set(transfer.snapshot.counter_value);
       for (const photoId of transfer.snapshot.unlocked_photo_ids ?? []) {
         photoSystem.unlockedPhotoIds.add(photoId);

@@ -15,6 +15,8 @@ body {
   touch-action: manipulation;
 }
 
+#background-audio { display: none; }
+
 button, canvas { -webkit-tap-highlight-color: transparent; }
 
 .app-shell {
@@ -82,7 +84,28 @@ button {
 }
 
 .hud span { font-size: 11px; letter-spacing: .14em; }
-.hud strong { font-size: clamp(20px, 4vw, 32px); }
+.hud strong {
+  font-size: clamp(20px, 4vw, 32px);
+  font-variant-numeric: tabular-nums;
+  transform-origin: 50% 100%;
+  will-change: transform, filter;
+}
+
+.hud strong.counter-jump {
+  animation: counter-number-jump 380ms cubic-bezier(.22, .85, .3, 1);
+}
+
+@keyframes counter-number-jump {
+  0% { transform: translateY(0) scale(1); filter: brightness(1); }
+  34% { transform: translateY(-.42em) scale(1.12, .92); filter: brightness(1.45); }
+  58% { transform: translateY(.08em) scale(.96, 1.08); filter: brightness(1.18); }
+  78% { transform: translateY(-.08em) scale(1.03, .98); }
+  100% { transform: translateY(0) scale(1); filter: brightness(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud strong.counter-jump { animation-duration: 1ms; }
+}
 
 .status-pill {
   position: absolute;
@@ -124,8 +147,10 @@ button {
   inset: 0;
   z-index: 5;
   display: grid;
-  place-items: center;
+  align-items: center;
+  justify-items: center;
   padding: 18px;
+  overflow: hidden;
   background: #080b13e8;
   touch-action: none;
 }
@@ -134,13 +159,18 @@ button {
 
 .photo-card {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-rows: min-content minmax(0, 1fr) min-content;
   gap: 10px;
   justify-items: center;
-  width: min(92%, 720px);
-  height: min(calc(100% - 36px), 620px);
-  max-height: calc(100% - 36px);
+  align-self: center;
+  box-sizing: border-box;
+  width: 92%;
+  max-width: 720px;
+  height: calc(100% - 36px);
+  max-height: 620px;
+  min-height: 0;
   padding: 16px;
+  overflow: hidden;
   border: 2px solid #f8f5ea;
   background: #171a28;
   box-shadow: 8px 8px 0 #000;
@@ -149,9 +179,12 @@ button {
 .single-photo-content {
   position: relative;
   display: grid;
+  align-self: stretch;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 0;
+  min-width: 0;
+  max-height: 100%;
   place-items: center;
   overflow: hidden;
 }
@@ -162,6 +195,8 @@ button {
   display: block;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   min-height: 0;
   object-fit: contain;
   background: #05070c;
@@ -181,14 +216,17 @@ button {
 .photo-card.is-loading .single-photo-content img { visibility: hidden; }
 
 .photo-card.gallery-mode {
-  width: min(96%, 820px);
+  width: 96%;
+  max-width: 820px;
 }
 
 .gallery-stage {
   position: relative;
+  align-self: stretch;
   width: 100%;
-  height: 100%;
-  min-height: 180px;
+  height: auto;
+  min-height: 0;
+  max-height: 100%;
   overflow: hidden;
   perspective: 900px;
   touch-action: none;
@@ -215,11 +253,11 @@ button {
   .photo-card {
     width: 96%;
     height: calc(100% - 12px);
-    max-height: calc(100% - 12px);
+    max-height: 620px;
     padding: 10px;
   }
   .single-photo-content { min-height: 0; }
-  .gallery-stage { height: 100%; min-height: 0; }
+  .gallery-stage { height: auto; min-height: 0; }
 }
 
 .gallery-photo[data-position="center"] {
@@ -249,10 +287,21 @@ button {
   text-shadow: 1px 1px 0 #000;
 }
 
-.photo-title { margin: 0; font: 700 18px system-ui, sans-serif; }
+.photo-title {
+  max-width: 100%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  font: 700 18px system-ui, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .photo-caption {
   min-height: 2.8em;
+  max-height: 6.2em;
+  max-width: 100%;
   margin: 0;
+  overflow-y: auto;
   color: #f8f1dd;
   font-family: "STKaiti", "Kaiti SC", "KaiTi", "楷体", serif;
   font-size: clamp(15px, 2.6vw, 20px);

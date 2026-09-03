@@ -29,23 +29,32 @@ export class AudioSystem {
     this.available = typeof Audio !== "undefined";
     this.unlocked = false;
     this.backgroundRequested = false;
+    this.backgroundRestartPending = false;
+    this.backgroundPlayPending = null;
     this.background = null;
     this.effectPools = new Map();
     this.retryTimers = new Map();
     if (!this.available) return;
 
-    this.background = new Audio(paths.ground);
+    const embeddedBackground = typeof document !== "undefined"
+      ? document.querySelector("#background-audio")
+      : null;
+    this.background = embeddedBackground ?? new Audio(paths.ground);
     this.background.loop = true;
     this.background.preload = "auto";
     this.background.volume = .38;
+    this.background.setAttribute?.("playsinline", "");
+    this.background.setAttribute?.("webkit-playsinline", "");
     this.background.load();
     for (const [name, path] of Object.entries(paths)) {
       if (name === "ground") continue;
       const pool = Array.from({ length: 1 }, () => {
-        const track = new Audio(path);
-        track.preload = "auto";
+        // Reserve the mobile media connection/decoder for the background
+        // track during startup. Effects fetch on first use and never block it.
+        const track = new Audio();
+        track.preload = "none";
         track.volume = EFFECT_VOLUME[name] ?? .75;
-        track.load();
+        track.src = path;
         return track;
       });
       this.effectPools.set(name, pool);
@@ -58,32 +67,55 @@ export class AudioSystem {
     target.addEventListener("pointerdown", unlock, { capture: true, passive: true });
     target.addEventListener("touchstart", unlock, { capture: true, passive: true });
     target.addEventListener("mousedown", unlock, { capture: true, passive: true });
+    target.addEventListener("click", unlock, { capture: true, passive: true });
     if (typeof document !== "undefined") {
-      document.addEventListener("WeixinJSBridgeReady", unlock, { once: true });
+      document.addEventListener("WeixinJSBridgeReady", unlock);
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") this.resumeBackground();
+      });
     }
+    target.addEventListener("pageshow", () => this.resumeBackground());
     if (typeof window !== "undefined" && window.WeixinJSBridge) unlock();
   }
 
   unlock() {
-    if (!this.available || this.unlocked) return;
+    if (!this.available) return;
     this.unlocked = true;
-    if (this.backgroundRequested) this.startBackground(true);
+    // Do not make unlock a one-shot operation. Some mobile WebViews report a
+    // bridge event before audio is actually permitted; every later gesture
+    // must therefore be able to retry the pending background track.
+    this.resumeBackground();
   }
 
   startBackground(restart = false) {
     this.backgroundRequested = true;
+    if (restart) this.backgroundRestartPending = true;
+    this.resumeBackground();
+  }
+
+  resumeBackground() {
     if (!this.available || !this.background) return;
-    if (!this.unlocked) return;
-    if (restart) this.background.currentTime = 0;
+    if (!this.unlocked || !this.backgroundRequested) return;
+    if (this.backgroundPlayPending) return;
+    if (!this.background.paused && !this.background.ended) {
+      this.backgroundRestartPending = false;
+      return;
+    }
+    if (this.backgroundRestartPending) this.background.currentTime = 0;
     const playback = this.background.play();
-    playback?.catch?.(() => {
-      // Mobile browsers resume this request synchronously on the first
-      // pointer/touch gesture through bindUnlock().
+    this.backgroundPlayPending = playback ?? null;
+    playback?.then?.(() => {
+      this.backgroundRestartPending = false;
+      this.backgroundPlayPending = null;
+    }).catch?.(() => {
+      // Keep the request pending. The next real touch/click will retry it.
+      this.backgroundPlayPending = null;
     });
   }
 
   stopBackground(reset = false) {
     this.backgroundRequested = false;
+    this.backgroundRestartPending = false;
     if (!this.available || !this.background) return;
     this.background.pause();
     if (reset) this.background.currentTime = 0;

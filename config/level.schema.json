@@ -17,6 +17,7 @@
   ],
   "properties": {
     "level_id": { "type": "string", "minLength": 1 },
+    "inherit_player_form": { "type": "boolean" },
     "map": {
       "type": "object",
       "required": ["json", "image", "width", "height", "ground_y", "cell_width", "cell_height"],
