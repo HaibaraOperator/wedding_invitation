@@ -31,18 +31,21 @@ export class AudioSystem {
     this.backgroundRequested = false;
     this.background = null;
     this.effectPools = new Map();
+    this.retryTimers = new Map();
     if (!this.available) return;
 
     this.background = new Audio(paths.ground);
     this.background.loop = true;
     this.background.preload = "auto";
     this.background.volume = .38;
+    this.background.load();
     for (const [name, path] of Object.entries(paths)) {
       if (name === "ground") continue;
-      const pool = Array.from({ length: 4 }, () => {
+      const pool = Array.from({ length: 1 }, () => {
         const track = new Audio(path);
         track.preload = "auto";
         track.volume = EFFECT_VOLUME[name] ?? .75;
+        track.load();
         return track;
       });
       this.effectPools.set(name, pool);
@@ -70,6 +73,7 @@ export class AudioSystem {
   startBackground(restart = false) {
     this.backgroundRequested = true;
     if (!this.available || !this.background) return;
+    if (!this.unlocked) return;
     if (restart) this.background.currentTime = 0;
     const playback = this.background.play();
     playback?.catch?.(() => {
@@ -86,12 +90,20 @@ export class AudioSystem {
   }
 
   play(name) {
-    if (!this.available) return;
+    if (!this.available || !this.unlocked) return;
     const pool = this.effectPools.get(name);
     if (!pool?.length) return;
     const track = pool.find((candidate) => candidate.paused || candidate.ended) ?? pool[0];
     track.currentTime = 0;
-    track.play()?.catch?.(() => {});
+    track.play()?.catch?.(() => {
+      track.load();
+      clearTimeout(this.retryTimers.get(name));
+      this.retryTimers.set(name, setTimeout(() => {
+        if (!this.unlocked) return;
+        track.currentTime = 0;
+        track.play()?.catch?.(() => {});
+      }, 220));
+    });
   }
 
   beginCinematic(kind) {

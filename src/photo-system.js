@@ -1,3 +1,10 @@
+const MEDIA_REVISION = "20260903-1";
+
+const versionedMediaUrl = (path, retry = 0) => {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}media_v=${MEDIA_REVISION}${retry ? `&photo_retry=${retry}` : ""}`;
+};
+
 export class PhotoSystem {
   constructor(photoConfigs, galleryConfigs, elements, counter) {
     this.photos = new Map(photoConfigs.map((photo) => [photo.id, photo]));
@@ -18,9 +25,15 @@ export class PhotoSystem {
     this.gestureStartX = null;
     this.preloadPlan = [];
     this.stagedPaths = new Set();
-    this.warmedPaths = new Set();
-    this.warmQueue = [];
-    this.warmWorkers = 0;
+    this.pathPromises = new Map();
+    this.pathImages = new Map();
+    this.loadQueue = [];
+    this.loadWorkers = 0;
+    this.maxLoadWorkers = 2;
+    this.loading = false;
+    this.loadFailed = false;
+    this.loadToken = 0;
+    this.activeMedia = null;
   }
 
   configurePreloadPlan(config) {
@@ -37,54 +50,93 @@ export class PhotoSystem {
     });
   }
 
-  warmAllInBackground() {
-    if (typeof fetch !== "function") return;
-    const paths = new Set([
-      ...[...this.photos.values()].map((photo) => photo.photo_path),
-      ...[...this.galleries.values()].flatMap((gallery) => gallery.photos.map((photo) => photo.photo_path)),
-    ]);
-    this.warmQueue.push(...[...paths].filter(Boolean));
-    const start = () => {
-      while (this.warmWorkers < 2 && this.warmQueue.length) this.runWarmWorker();
-    };
-    if (typeof requestIdleCallback === "function") requestIdleCallback(start, { timeout: 900 });
-    else setTimeout(start, 0);
+  primeUpcoming() {
+    if (!this.preloadPlan.length) return;
+    const firstX = this.preloadPlan[0].x;
+    const paths = this.preloadPlan
+      .filter((entry) => entry.x <= firstX + 384)
+      .flatMap((entry) => {
+        entry.staged = true;
+        return entry.paths;
+      });
+    this.stagePaths(paths);
   }
 
-  async runWarmWorker() {
-    const path = this.warmQueue.shift();
-    if (!path) return;
-    this.warmWorkers += 1;
-    try {
-      const response = await fetch(path, { cache: "force-cache", priority: "low" });
-      if (response.ok) await response.arrayBuffer();
-      this.warmedPaths.add(path);
-    } catch {
-      // A missing optional photo is reported when its event is actually opened.
-    } finally {
-      this.warmWorkers -= 1;
-      if (this.warmQueue.length) this.runWarmWorker();
-    }
+  // Kept as a compatibility alias. It intentionally primes only the first
+  // nearby event instead of downloading an entire chapter's photo library.
+  warmAllInBackground() {
+    this.primeUpcoming();
   }
 
   updateWorldPosition(visibleRightX) {
     for (const entry of this.preloadPlan) {
-      if (entry.staged || entry.x > visibleRightX + 320) continue;
+      if (entry.staged || entry.x > visibleRightX + 1280) continue;
       entry.staged = true;
       this.stagePaths(entry.paths);
     }
   }
 
-  stagePaths(paths) {
-    if (typeof Image !== "function") return;
-    for (const path of paths ?? []) {
-      if (!path || this.stagedPaths.has(path)) continue;
+  stagePaths(paths, { priority = false } = {}) {
+    if (typeof Image !== "function") return Promise.resolve([]);
+    return Promise.all((paths ?? []).filter(Boolean).map((path) => {
       this.stagedPaths.add(path);
+      return this.loadPath(path, { priority });
+    }));
+  }
+
+  loadPath(path, { priority = false } = {}) {
+    if (this.pathImages.has(path)) return Promise.resolve(this.pathImages.get(path));
+    if (this.pathPromises.has(path)) {
+      if (priority) {
+        const queuedIndex = this.loadQueue.findIndex((task) => task.path === path);
+        if (queuedIndex > 0) this.loadQueue.unshift(this.loadQueue.splice(queuedIndex, 1)[0]);
+      }
+      return this.pathPromises.get(path);
+    }
+    const promise = new Promise((resolve) => {
+      const task = { path, resolve };
+      if (priority) this.loadQueue.unshift(task);
+      else this.loadQueue.push(task);
+      this.pumpLoadQueue();
+    });
+    this.pathPromises.set(path, promise);
+    return promise;
+  }
+
+  pumpLoadQueue() {
+    while (this.loadWorkers < this.maxLoadWorkers && this.loadQueue.length) {
+      const task = this.loadQueue.shift();
+      this.loadWorkers += 1;
+      this.loadPathWithRetry(task.path).then((image) => {
+        if (image) this.pathImages.set(task.path, image);
+        else this.pathPromises.delete(task.path);
+        task.resolve(image);
+      }).finally(() => {
+        this.loadWorkers -= 1;
+        this.pumpLoadQueue();
+      });
+    }
+  }
+
+  async loadPathWithRetry(path, retries = 2) {
+    for (let attempt = 0; attempt <= retries; attempt += 1) {
       const image = new Image();
       image.decoding = "async";
-      image.src = path;
-      image.decode?.().catch(() => {});
+      image.loading = "eager";
+      const source = versionedMediaUrl(path, attempt);
+      const loaded = await new Promise((resolve) => {
+        const timer = setTimeout(() => resolve(false), 45000);
+        image.onload = () => { clearTimeout(timer); resolve(true); };
+        image.onerror = () => { clearTimeout(timer); resolve(false); };
+        image.src = source;
+      });
+      if (loaded) {
+        await image.decode?.().catch(() => {});
+        return image;
+      }
+      if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, 250 * (attempt + 1)));
     }
+    return null;
   }
 
   get(id) {
@@ -110,47 +162,111 @@ export class PhotoSystem {
   }
 
   show(photo) {
-    this.stagePaths([photo.photo_path]);
     this.mode = "single";
     this.gallery = null;
+    this.activeMedia = photo;
     this.elements.single.hidden = false;
     this.elements.gallery.hidden = true;
     this.elements.card.classList.remove("gallery-mode");
     this.visible = true;
+    this.loading = true;
+    this.loadFailed = false;
+    const token = ++this.loadToken;
     this.unlockedPhotoIds.add(photo.id);
     this.elements.title.textContent = photo.title ?? "";
-    this.elements.image.src = photo.photo_path;
+    this.elements.image.removeAttribute?.("src");
     this.elements.image.style.objectFit = photo.fit ?? "contain";
     this.fullText = photo.text ?? photo.caption ?? "再次点击继续";
     this.visibleCharacters = 0;
     this.typewriterCps = Math.max(1, Number(photo.typewriter_cps ?? 14));
-    this.elements.caption.textContent = "";
+    this.elements.caption.textContent = "照片载入中…";
+    this.elements.card.classList.add("is-loading");
     this.elements.modal.hidden = false;
-    if (photo.days_together !== null && photo.days_together !== undefined) {
-      this.counter.set(photo.days_together);
+    this.canCloseAt = Infinity;
+    if (typeof Image !== "function") {
+      this.elements.image.src = photo.photo_path;
+      this.finishMediaLoad();
+      if (photo.days_together !== null && photo.days_together !== undefined) {
+        this.counter.set(photo.days_together);
+      }
+      return;
     }
-    this.canCloseAt = performance.now() + 280;
+    this.stagePaths([photo.photo_path], { priority: true }).then(([image]) => {
+      if (token !== this.loadToken || !this.visible) return;
+      if (!image) { this.finishLoadError(); return; }
+      this.elements.image.src = image.currentSrc || image.src;
+      this.elements.image.alt = photo.alt ?? "婚纱照";
+      this.finishMediaLoad();
+      if (photo.days_together !== null && photo.days_together !== undefined) {
+        this.counter.set(photo.days_together);
+      }
+    });
   }
 
   showGallery(gallery) {
     if (!gallery) throw new Error("轮播照片配置不存在");
-    this.stagePaths(gallery.photos.map((photo) => photo.photo_path));
     this.mode = "gallery";
     this.gallery = gallery;
+    this.activeMedia = gallery;
     this.galleryIndex = 0;
     this.visible = true;
+    this.loading = true;
+    this.loadFailed = false;
+    const token = ++this.loadToken;
     this.pending = null;
     this.elements.single.hidden = true;
     this.elements.gallery.hidden = false;
     this.elements.card.classList.add("gallery-mode");
+    this.elements.card.classList.add("is-loading");
     this.elements.title.textContent = gallery.title ?? "";
     this.fullText = gallery.text ?? "";
     this.visibleCharacters = 0;
     this.typewriterCps = Math.max(1, Number(gallery.typewriter_cps ?? 14));
-    this.elements.caption.textContent = "";
+    this.elements.caption.textContent = "照片载入中…";
     this.elements.modal.hidden = false;
+    this.canCloseAt = Infinity;
+    if (typeof Image !== "function") {
+      this.finishMediaLoad();
+      this.renderGallery();
+      return;
+    }
+    const paths = gallery.photos.map((photo) => photo.photo_path);
+    this.stagePaths(paths, { priority: true }).then((images) => {
+      if (token !== this.loadToken || !this.visible) return;
+      if (images.some((image) => !image)) { this.finishLoadError(); return; }
+      this.finishMediaLoad();
+      this.renderGallery();
+    });
+  }
+
+  finishMediaLoad() {
+    this.loading = false;
+    this.loadFailed = false;
+    this.visibleCharacters = 0;
+    this.elements.caption.textContent = "";
+    this.elements.card.classList.remove("is-loading");
     this.canCloseAt = performance.now() + 360;
-    this.renderGallery();
+  }
+
+  finishLoadError() {
+    this.loading = false;
+    this.loadFailed = true;
+    this.elements.card.classList.remove("is-loading");
+    this.elements.caption.textContent = "照片载入失败，请检查网络后轻触重试";
+    this.canCloseAt = Infinity;
+  }
+
+  retryActiveMedia() {
+    if (!this.loadFailed || !this.activeMedia) return;
+    const active = this.activeMedia;
+    for (const path of this.mode === "gallery"
+      ? active.photos.map((photo) => photo.photo_path)
+      : [active.photo_path]) {
+      this.pathPromises.delete(path);
+      this.pathImages.delete(path);
+    }
+    if (this.mode === "gallery") this.showGallery(active);
+    else this.show(active);
   }
 
   renderGallery() {
@@ -172,7 +288,8 @@ export class PhotoSystem {
       image.hidden = false;
       const relative = (index - this.galleryIndex + count) % count;
       const position = relative === 0 ? "center" : relative === 1 ? "right" : "left";
-      image.src = photos[index].photo_path;
+      const cached = this.pathImages.get(photos[index].photo_path);
+      image.src = cached?.currentSrc || cached?.src || versionedMediaUrl(photos[index].photo_path);
       image.alt = photos[index].alt ?? `照片 ${index + 1}`;
       image.dataset.position = position;
       image.style.zIndex = position === "center" ? "3" : "1";
@@ -191,6 +308,10 @@ export class PhotoSystem {
 
   endGalleryGesture(clientX, now = performance.now()) {
     if (this.mode !== "gallery" || !this.gallery) return "none";
+    if (this.loading || this.loadFailed) {
+      if (this.loadFailed) this.retryActiveMedia();
+      return "none";
+    }
     const start = this.gestureStartX;
     this.gestureStartX = null;
     if (!Number.isFinite(start)) return "none";
@@ -206,7 +327,7 @@ export class PhotoSystem {
   }
 
   updateModal(dt) {
-    if (!this.visible || this.visibleCharacters >= this.fullText.length) return;
+    if (!this.visible || this.loading || this.loadFailed || this.visibleCharacters >= this.fullText.length) return;
     this.visibleCharacters = Math.min(
       this.fullText.length,
       this.visibleCharacters + this.typewriterCps * dt,
@@ -218,6 +339,10 @@ export class PhotoSystem {
   }
 
   canClose(now = performance.now()) {
+    if (this.loadFailed) {
+      this.retryActiveMedia();
+      return false;
+    }
     return this.visible && now >= this.canCloseAt;
   }
 
@@ -225,6 +350,10 @@ export class PhotoSystem {
     if (!this.visible) return null;
     const closed = this.mode === "gallery" ? this.gallery : this.pending;
     this.visible = false;
+    this.loading = false;
+    this.loadFailed = false;
+    this.loadToken += 1;
+    this.activeMedia = null;
     this.pending = null;
     this.prepareTimer = 0;
     this.fullText = "";
@@ -232,6 +361,7 @@ export class PhotoSystem {
     this.elements.modal.hidden = true;
     this.elements.image.removeAttribute("src");
     this.elements.card.classList.remove("gallery-mode");
+    this.elements.card.classList.remove("is-loading");
     this.elements.gallery.hidden = true;
     this.elements.single.hidden = false;
     this.mode = "single";

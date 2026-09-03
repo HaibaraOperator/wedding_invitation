@@ -1,14 +1,14 @@
 import { ASSET_PATHS } from "./constants.js";
-import { AssetLoader } from "./asset-loader.js";
+import { AssetLoader } from "./asset-loader.js?v=mobile-media-2";
 import { CounterDisplay } from "./counter-display.js";
 import { DebugOverlay } from "./debug-overlay.js";
 import { GameLoop } from "./game-loop.js";
 import { WeddingGame } from "./game.js";
 import { InputController } from "./input-controller.js";
 import { LevelConfigLoader, MapLoader } from "./level-config-loader.js";
-import { PhotoSystem } from "./photo-system.js";
+import { PhotoSystem } from "./photo-system.js?v=mobile-media-2";
 import { Renderer } from "./renderer.js";
-import { AudioSystem } from "./audio-system.js";
+import { AudioSystem } from "./audio-system.js?v=mobile-media-2";
 
 const elements = {
   canvas: document.querySelector("#game-canvas"),
@@ -36,11 +36,27 @@ function setProgress(completed, total) {
   elements.loadingLabel.textContent = `${value}%`;
 }
 
+function criticalAssetKeys(config) {
+  const form = String(config.player_start?.form ?? "SMALL").toLowerCase();
+  const prefix = form === "small" ? "groom_small" : form === "fire" ? "groom_fire" : "groom_big";
+  return [
+    "map_image",
+    `${prefix}_idle`, `${prefix}_walk_a`, `${prefix}_walk_b`, `${prefix}_jump`,
+    "question_block",
+    "coin_0", "coin_1", "coin_2", "coin_3",
+    "goomba_walk_a", "goomba_walk_b",
+    "koopa_walk_a", "koopa_walk_b", "koopa_retract", "koopa_shell_idle", "koopa_shell_move",
+    "piranha_open", "piranha_closed",
+    "bowser_mouth_closed", "bowser_mouth_open",
+    "super_mushroom", "fire_flower",
+  ];
+}
+
 async function boot() {
   const query = new URLSearchParams(window.location.search);
-  const requestedLevel = query.get("level") ?? "travel";
+  const requestedLevel = query.get("level") ?? "meet";
   const allowedLevels = new Set(["meet", "travel", "home"]);
-  const level = allowedLevels.has(requestedLevel) ? requestedLevel : "travel";
+  const level = allowedLevels.has(requestedLevel) ? requestedLevel : "meet";
   const config = await LevelConfigLoader.load(`./config/level.${level}.json`);
   document.title = config.ui?.document_title ?? "我们的婚礼故事";
   document.querySelector(".eyebrow").textContent = config.ui?.eyebrow ?? "OUR WEDDING JOURNEY";
@@ -50,10 +66,15 @@ async function boot() {
   const [mapData] = await Promise.all([MapLoader.loadJson(config.map.json)]);
   const loader = new AssetLoader(setProgress);
   // 照片按弹窗需要惰性载入，避免长关卡启动时并发解码几十张大图。
-  await loader.loadManifest({
+  const manifest = {
     ...ASSET_PATHS,
     map_image: config.map.image,
-  });
+  };
+  const criticalKeys = criticalAssetKeys(config);
+  // 首屏只等待地图、玩家与近场互动素材。其余小型像素图在游戏
+  // 开始后以受控并发数补载，避免手机首页同时发出一百多个请求。
+  await loader.loadManifest(manifest, { keys: criticalKeys, concurrency: 6, required: true });
+  loader.preloadManifest(manifest, { excludeKeys: criticalKeys, concurrency: 3 });
 
   const counter = new CounterDisplay(elements.counter, config.counter.initial_value);
   const audio = new AudioSystem();
@@ -81,9 +102,7 @@ async function boot() {
     counter,
   );
   photoSystem.configurePreloadPlan(config);
-  // Fetch bytes into the browser cache at startup with only two low-priority
-  // workers. Images are decoded only when their event anchor nears the camera.
-  photoSystem.warmAllInBackground();
+  photoSystem.primeUpcoming();
 
   const game = new WeddingGame({
     config,

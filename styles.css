@@ -134,10 +134,11 @@ button {
 
 .photo-card {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 10px;
   justify-items: center;
   width: min(92%, 720px);
+  height: min(calc(100% - 36px), 620px);
   max-height: calc(100% - 36px);
   padding: 16px;
   border: 2px solid #f8f5ea;
@@ -146,10 +147,13 @@ button {
 }
 
 .single-photo-content {
+  position: relative;
   display: grid;
   width: 100%;
+  height: 100%;
   min-height: 0;
   place-items: center;
+  overflow: hidden;
 }
 
 .single-photo-content[hidden], .gallery-stage[hidden] { display: none; }
@@ -157,11 +161,24 @@ button {
 .single-photo-content img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: min(48svh, 340px);
+  height: 100%;
+  min-height: 0;
   object-fit: contain;
   background: #05070c;
 }
+
+.photo-loading {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-items: center;
+  color: #f8f1dd;
+  background: #05070c;
+  font-size: 13px;
+}
+
+.photo-card.is-loading .photo-loading { display: grid; }
+.photo-card.is-loading .single-photo-content img { visibility: hidden; }
 
 .photo-card.gallery-mode {
   width: min(96%, 820px);
@@ -170,7 +187,8 @@ button {
 .gallery-stage {
   position: relative;
   width: 100%;
-  height: min(48svh, 360px);
+  height: 100%;
+  min-height: 180px;
   overflow: hidden;
   perspective: 900px;
   touch-action: none;
@@ -194,6 +212,14 @@ button {
   .topbar { align-items: flex-start; }
   .top-actions { align-items: flex-end; flex-direction: column-reverse; }
   .level-nav a { padding: 6px 7px; }
+  .photo-card {
+    width: 96%;
+    height: calc(100% - 12px);
+    max-height: calc(100% - 12px);
+    padding: 10px;
+  }
+  .single-photo-content { min-height: 0; }
+  .gallery-stage { height: 100%; min-height: 0; }
 }
 
 .gallery-photo[data-position="center"] {
