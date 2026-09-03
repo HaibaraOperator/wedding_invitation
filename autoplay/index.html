@@ -4,45 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#171a28" />
-    <title>我们的婚礼故事</title>
+    <base href="../" />
+    <title>我们的婚礼故事 · 自动播放</title>
     <link rel="stylesheet" href="./styles.css?v=autoplay-1" />
   </head>
-  <body>
-    <section id="experience-choice" class="experience-choice" hidden aria-labelledby="experience-choice-title">
-      <div class="experience-choice-card">
-        <p class="eyebrow">CHOOSE YOUR JOURNEY</p>
-        <h2 id="experience-choice-title">想怎样看我们的故事？</h2>
-        <div class="experience-options">
-          <a class="experience-option interactive-option" href="./?mode=interactive&amp;level=meet">
-            我想互动，得看看王郅臻又整了什么活
-          </a>
-          <a class="experience-option autoplay-option" href="./autoplay/?level=meet">
-            我懒得点，直接给我放动画
-          </a>
-        </div>
-      </div>
-    </section>
+  <body data-experience="autoplay">
     <main class="app-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">OUR WEDDING JOURNEY</p>
+          <p class="eyebrow">OUR WEDDING JOURNEY · AUTO PLAY</p>
           <h1>王郅臻与梁晓媛的婚礼故事</h1>
         </div>
         <div class="top-actions">
           <nav class="level-nav" aria-label="选择故事章节">
-            <a href="?level=meet">相遇</a><a href="?level=travel">旅行</a><a href="?level=home">归家</a>
+            <a href="./autoplay/?level=meet">相遇</a><a href="./autoplay/?level=travel">旅行</a><a href="./autoplay/?level=home">归家</a>
           </nav>
           <button id="debug-toggle" type="button" aria-pressed="false">开启调试</button>
         </div>
       </header>
 
-      <section id="game-stage" class="game-stage" aria-label="婚礼故事">
+      <section id="game-stage" class="game-stage" aria-label="婚礼故事自动播放">
         <canvas id="game-canvas" tabindex="0"></canvas>
         <div class="hud" aria-live="polite">
           <span>TOGETHER</span>
           <strong id="counter-value">0</strong>
         </div>
-        <div id="status-pill" class="status-pill">点击画面开始奔跑</div>
+        <div id="status-pill" class="status-pill">故事即将自动播放</div>
         <aside id="debug-overlay" class="debug-overlay" aria-label="调试信息"></aside>
         <div id="photo-modal" class="photo-modal" hidden aria-modal="true" role="dialog">
           <div class="photo-card">
@@ -51,10 +38,10 @@
               <img id="photo-image" alt="婚纱照" />
               <span class="photo-loading" aria-live="polite">照片载入中…</span>
             </div>
-            <div id="gallery-stage" class="gallery-stage" hidden aria-label="三张照片轮播">
-              <img class="gallery-photo" alt="故乡照片一" />
-              <img class="gallery-photo" alt="故乡照片二" />
-              <img class="gallery-photo" alt="故乡照片三" />
+            <div id="gallery-stage" class="gallery-stage" hidden aria-label="照片自动轮播">
+              <img class="gallery-photo" alt="照片一" />
+              <img class="gallery-photo" alt="照片二" />
+              <img class="gallery-photo" alt="照片三" />
               <div id="gallery-dots" class="gallery-dots" aria-live="polite"></div>
             </div>
             <p id="photo-caption" class="photo-caption"></p>
@@ -62,23 +49,33 @@
         </div>
         <div id="loading-overlay" class="loading-overlay">
           <div class="loading-card">
-            <span>载入婚礼故事</span>
+            <span>载入自动播放版本</span>
             <progress id="loading-progress" max="100" value="0"></progress>
             <strong id="loading-label">0%</strong>
           </div>
         </div>
       </section>
 
-      <footer class="help-row">
-        <span>手机：轻触 / 长按</span>
-        <span>电脑：鼠标左键 / 长按</span>
-        <span>调试快捷键：D</span>
+      <footer class="help-row autoplay-help">
+        <span>无需操作，完整故事将自动播放</span>
       </footer>
     </main>
+
+    <section id="credits-overlay" class="credits-overlay" hidden aria-label="制作人员名单">
+      <iframe id="credits-replay" title="从相遇篇重新播放的虚焦背景" tabindex="-1" aria-hidden="true"></iframe>
+      <div class="credits-veil"></div>
+      <div class="credits-card">
+        <p><span>制作：王郅臻，ChatGPT</span><span class="credit-tab">创意：王郅臻</span></p>
+        <p>出场人物：王郅臻，梁晓媛，阿贝尔</p>
+        <p>技术/场景/素材支持：ChatGPT</p>
+      </div>
+    </section>
+
     <audio
       id="background-audio"
       src="./assets/audio/Ground_Theme.mp3"
       preload="auto"
+      autoplay
       loop
       playsinline
       webkit-playsinline

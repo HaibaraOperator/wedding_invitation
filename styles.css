@@ -17,6 +17,60 @@ body {
 
 #background-audio { display: none; }
 
+.experience-choice {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 50% 28%, #2a365a 0, transparent 42%),
+    #10131e;
+}
+
+.experience-choice[hidden] { display: none; }
+
+.experience-choice-card {
+  width: min(680px, 100%);
+  padding: clamp(24px, 5vw, 46px);
+  border: 2px solid #f8f5ea;
+  border-radius: 18px;
+  background: #171a28f2;
+  box-shadow: 12px 14px 0 #05070c;
+  text-align: center;
+}
+
+.experience-choice-card h2 {
+  margin: 8px 0 28px;
+  font-family: "STKaiti", "Kaiti SC", "KaiTi", "楷体", system-ui, sans-serif;
+  font-size: clamp(24px, 5vw, 38px);
+}
+
+.experience-options { display: grid; gap: 16px; }
+
+.experience-option {
+  display: grid;
+  min-height: 74px;
+  place-items: center;
+  padding: 16px 20px;
+  border: 2px solid #05070c;
+  border-radius: 12px;
+  color: #10131e;
+  font-family: "STKaiti", "Kaiti SC", "KaiTi", "楷体", system-ui, sans-serif;
+  font-size: clamp(17px, 3.5vw, 24px);
+  font-weight: 700;
+  line-height: 1.45;
+  text-decoration: none;
+  box-shadow: 6px 7px 0 #05070c;
+  transition: translate 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+.experience-option:hover { filter: brightness(1.08); }
+.experience-option:active { translate: 4px 5px; box-shadow: 2px 2px 0 #05070c; }
+.interactive-option { background: #f7c948; }
+.autoplay-option { background: #dbeafe; }
+
 button, canvas { -webkit-tap-highlight-color: transparent; }
 
 .app-shell {
@@ -142,6 +196,75 @@ button {
 
 .debug-overlay[hidden] { display: none; }
 
+.autoplay-mode #game-canvas { cursor: default; }
+.autoplay-mode .level-nav,
+.autoplay-mode #debug-toggle,
+.credits-background .topbar,
+.credits-background .help-row,
+.credits-background .hud,
+.credits-background .status-pill,
+.credits-background .debug-overlay { display: none; }
+
+.credits-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  overflow: hidden;
+  background: #111827;
+}
+
+.credits-overlay[hidden] { display: none; }
+
+.credits-overlay iframe {
+  position: absolute;
+  inset: -3%;
+  width: 106%;
+  height: 106%;
+  border: 0;
+  pointer-events: none;
+  filter: blur(10px) grayscale(.35) brightness(.58);
+  transform: scale(1.03);
+}
+
+.credits-veil {
+  position: absolute;
+  inset: 0;
+  background: #4b5563a8;
+}
+
+.credits-card {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  gap: clamp(16px, 3vh, 30px);
+  padding: 24px;
+  color: white;
+  font-family: "STKaiti", "Kaiti SC", "KaiTi", "楷体", serif;
+  font-size: clamp(18px, 3.2vw, 34px);
+  line-height: 1.8;
+  text-align: center;
+  text-shadow: 2px 2px 0 #000, 0 0 18px #000;
+}
+
+.credits-card p { margin: 0; }
+.credit-tab { margin-left: clamp(32px, 8vw, 120px); }
+
+.credits-background,
+.credits-background .app-shell,
+.credits-background .game-stage {
+  width: 100%;
+  min-width: 100%;
+  height: 100svh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+}
+
+.credits-background { overflow: hidden; }
+.credits-background .game-stage { border: 0; border-radius: 0; box-shadow: none; }
+
 .photo-modal, .loading-overlay {
   position: absolute;
   inset: 0;
@@ -258,6 +381,7 @@ button {
   }
   .single-photo-content { min-height: 0; }
   .gallery-stage { height: auto; min-height: 0; }
+  .credit-tab { display: block; margin-left: 0; }
 }
 
 .gallery-photo[data-position="center"] {

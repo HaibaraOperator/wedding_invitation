@@ -1,14 +1,15 @@
 import { ASSET_PATHS } from "./constants.js";
-import { AssetLoader } from "./asset-loader.js?v=mobile-media-4";
+import { AssetLoader } from "./asset-loader.js?v=autoplay-1";
+import { AutoPlayController } from "./autoplay-controller.js?v=autoplay-1";
 import { CounterDisplay } from "./counter-display.js?v=counter-jump-1";
 import { DebugOverlay } from "./debug-overlay.js";
 import { GameLoop } from "./game-loop.js";
 import { WeddingGame } from "./game.js";
 import { InputController } from "./input-controller.js";
 import { LevelConfigLoader, MapLoader } from "./level-config-loader.js";
-import { PhotoSystem } from "./photo-system.js?v=mobile-media-4";
+import { PhotoSystem } from "./photo-system.js?v=autoplay-1";
 import { Renderer } from "./renderer.js";
-import { AudioSystem } from "./audio-system.js?v=mobile-media-4";
+import { AudioSystem } from "./audio-system.js?v=autoplay-1";
 
 const elements = {
   canvas: document.querySelector("#game-canvas"),
@@ -28,6 +29,9 @@ const elements = {
   loading: document.querySelector("#loading-overlay"),
   loadingProgress: document.querySelector("#loading-progress"),
   loadingLabel: document.querySelector("#loading-label"),
+  experienceChoice: document.querySelector("#experience-choice"),
+  credits: document.querySelector("#credits-overlay"),
+  creditsReplay: document.querySelector("#credits-replay"),
 };
 
 function setProgress(completed, total) {
@@ -54,6 +58,15 @@ function criticalAssetKeys(config) {
 
 async function boot() {
   const query = new URLSearchParams(window.location.search);
+  const autoplayMode = document.body.dataset.experience === "autoplay" || query.get("mode") === "autoplay";
+  const creditsBackground = autoplayMode && query.get("credits_bg") === "1";
+  if (!autoplayMode && !query.has("level") && query.get("mode") !== "interactive") {
+    if (elements.experienceChoice) elements.experienceChoice.hidden = false;
+    elements.loading.hidden = true;
+    return;
+  }
+  document.body.classList.toggle("autoplay-mode", autoplayMode);
+  document.body.classList.toggle("credits-background", creditsBackground);
   const requestedLevel = query.get("level") ?? "meet";
   const allowedLevels = new Set(["meet", "travel", "home"]);
   const level = allowedLevels.has(requestedLevel) ? requestedLevel : "meet";
@@ -78,13 +91,23 @@ async function boot() {
 
   const counter = new CounterDisplay(elements.counter, config.counter.initial_value);
   const audio = new AudioSystem();
-  audio.bindUnlock(window);
-  audio.startBackground(true);
+  if (!creditsBackground) {
+    audio.bindUnlock(window);
+    audio.startBackground(true);
+    if (autoplayMode) audio.unlock();
+  } else {
+    // The blurred replay is visual ambience for the credits; keep its audio
+    // silent so it cannot overlap the foreground finale/firework track.
+    if (audio.background) audio.background.autoplay = false;
+    audio.stopBackground(true);
+  }
   const renderer = new Renderer(elements.canvas, loader, config.debug ?? {});
   const debugOverlay = new DebugOverlay(elements.debug, config.debug?.enabled);
   elements.debugToggle.textContent = debugOverlay.enabled ? "关闭调试" : "开启调试";
   elements.debugToggle.setAttribute("aria-pressed", String(debugOverlay.enabled));
-  const input = new InputController([elements.canvas, elements.photoModal]);
+  // The automatic cut has no interactive targets. Synthetic commands from
+  // AutoPlayController still use the same queue and state machine.
+  const input = new InputController(autoplayMode ? [] : [elements.canvas, elements.photoModal]);
   const photoSystem = new PhotoSystem(
     config.photos,
     config.galleries,
@@ -116,7 +139,8 @@ async function boot() {
     audio,
   });
   try {
-    const serializedTransition = window.sessionStorage.getItem("wedding_story_transition");
+    const transitionKey = autoplayMode ? "wedding_story_transition_auto" : "wedding_story_transition";
+    const serializedTransition = window.sessionStorage.getItem(transitionKey);
     const transfer = serializedTransition ? JSON.parse(serializedTransition) : null;
     if (transfer?.nextLevel === level && transfer.snapshot) {
       if (config.inherit_player_form !== false && transfer.snapshot.form) {
@@ -126,15 +150,16 @@ async function boot() {
       for (const photoId of transfer.snapshot.unlocked_photo_ids ?? []) {
         photoSystem.unlockedPhotoIds.add(photoId);
       }
-      window.sessionStorage.removeItem("wedding_story_transition");
+      window.sessionStorage.removeItem(transitionKey);
     }
   } catch {
     // A malformed or unavailable session store must not prevent the next
     // chapter from starting.
   }
   game.onChapterTransition = (nextLevel, snapshot) => {
+    const transitionKey = autoplayMode ? "wedding_story_transition_auto" : "wedding_story_transition";
     try {
-      window.sessionStorage.setItem("wedding_story_transition", JSON.stringify({ nextLevel, snapshot }));
+      window.sessionStorage.setItem(transitionKey, JSON.stringify({ nextLevel, snapshot }));
     } catch {
       // Navigation still works when storage is unavailable (for example in a
       // privacy-restricted embedded browser).
@@ -145,7 +170,39 @@ async function boot() {
     nextUrl.searchParams.set("fresh", String(Date.now()));
     window.location.assign(nextUrl);
   };
-  const loop = new GameLoop((dt) => game.update(dt), () => game.render());
+
+  const showCredits = () => {
+    if (level !== "home") return;
+    loop.stop();
+    audio.stopBackground(true);
+    if (creditsBackground) {
+      const replayUrl = new URL(window.location.href);
+      replayUrl.searchParams.set("level", "meet");
+      replayUrl.searchParams.set("credits_bg", "1");
+      replayUrl.searchParams.set("fresh", String(Date.now()));
+      window.location.replace(replayUrl);
+      return;
+    }
+    if (!elements.credits || !elements.creditsReplay) return;
+    const replayUrl = new URL(window.location.href);
+    replayUrl.searchParams.set("level", "meet");
+    replayUrl.searchParams.set("credits_bg", "1");
+    replayUrl.searchParams.set("fresh", String(Date.now()));
+    elements.creditsReplay.src = replayUrl.href;
+    elements.credits.hidden = false;
+    elements.credits.setAttribute("aria-hidden", "false");
+  };
+
+  const autoplay = autoplayMode
+    ? new AutoPlayController({ photoSeconds: 3, onComplete: showCredits })
+    : null;
+  const loop = new GameLoop(
+    (dt) => {
+      autoplay?.update(dt, game);
+      game.update(dt);
+    },
+    () => game.render(),
+  );
 
   elements.debugToggle.addEventListener("click", () => {
     const enabled = game.toggleDebug();
@@ -161,6 +218,7 @@ async function boot() {
 
   window.weddingGame = game;
   window.weddingLevel = level;
+  window.weddingAutoplay = autoplay;
   window.weddingCinematics = Object.freeze({
     flightToIreland: (onComplete) => game.playCinematic("flight_to_ireland", onComplete),
     flagTrainTour: (onComplete) => game.playCinematic("flag_train_tour", onComplete),
