@@ -23,6 +23,7 @@ export class PhotoSystem {
     this.gallery = null;
     this.galleryIndex = 0;
     this.staticGalleryCaption = false;
+    this.galleryCaptionStarted = false;
     this.gestureStartX = null;
     this.preloadPlan = [];
     this.stagedPaths = new Set();
@@ -213,6 +214,7 @@ export class PhotoSystem {
     const captions = gallery.photos.map((photo) => String(photo.caption ?? gallery.text ?? ""));
     this.staticGalleryCaption = captions.length > 1
       && captions.every((caption) => caption === captions[0]);
+    this.galleryCaptionStarted = false;
     this.visible = true;
     this.loading = true;
     this.loadFailed = false;
@@ -300,10 +302,16 @@ export class PhotoSystem {
     });
     this.fullText = centeredPhoto.caption ?? this.gallery.text ?? "";
     if (this.staticGalleryCaption) {
-      // A gallery with one shared caption displays it once and leaves it in
-      // place while the viewer swipes or autoplay advances between photos.
-      this.visibleCharacters = this.fullText.length;
-      this.elements.caption.textContent = this.fullText;
+      // A shared caption types in on the first photo, then remains unchanged
+      // while the viewer swipes or autoplay advances through the gallery.
+      if (!this.galleryCaptionStarted) {
+        this.galleryCaptionStarted = true;
+        this.visibleCharacters = 0;
+        this.elements.caption.textContent = "";
+      } else {
+        this.visibleCharacters = this.fullText.length;
+        this.elements.caption.textContent = this.fullText;
+      }
     } else {
       this.visibleCharacters = 0;
       this.elements.caption.textContent = "";
@@ -378,6 +386,7 @@ export class PhotoSystem {
     this.mode = "single";
     this.gallery = null;
     this.staticGalleryCaption = false;
+    this.galleryCaptionStarted = false;
     this.gestureStartX = null;
     return closed;
   }

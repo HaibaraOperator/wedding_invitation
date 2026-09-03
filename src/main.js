@@ -7,7 +7,7 @@ import { GameLoop } from "./game-loop.js";
 import { WeddingGame } from "./game.js";
 import { InputController } from "./input-controller.js";
 import { LevelConfigLoader, MapLoader } from "./level-config-loader.js";
-import { PhotoSystem } from "./photo-system.js?v=final-ui-1";
+import { PhotoSystem } from "./photo-system.js?v=final-ui-2";
 import { Renderer } from "./renderer.js";
 import { AudioSystem } from "./audio-system.js?v=autoplay-1";
 
