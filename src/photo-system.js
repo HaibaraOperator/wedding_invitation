@@ -22,6 +22,7 @@ export class PhotoSystem {
     this.mode = "single";
     this.gallery = null;
     this.galleryIndex = 0;
+    this.staticGalleryCaption = false;
     this.gestureStartX = null;
     this.preloadPlan = [];
     this.stagedPaths = new Set();
@@ -209,6 +210,9 @@ export class PhotoSystem {
     this.gallery = gallery;
     this.activeMedia = gallery;
     this.galleryIndex = 0;
+    const captions = gallery.photos.map((photo) => String(photo.caption ?? gallery.text ?? ""));
+    this.staticGalleryCaption = captions.length > 1
+      && captions.every((caption) => caption === captions[0]);
     this.visible = true;
     this.loading = true;
     this.loadFailed = false;
@@ -295,8 +299,15 @@ export class PhotoSystem {
       image.style.zIndex = position === "center" ? "3" : "1";
     });
     this.fullText = centeredPhoto.caption ?? this.gallery.text ?? "";
-    this.visibleCharacters = 0;
-    this.elements.caption.textContent = "";
+    if (this.staticGalleryCaption) {
+      // A gallery with one shared caption displays it once and leaves it in
+      // place while the viewer swipes or autoplay advances between photos.
+      this.visibleCharacters = this.fullText.length;
+      this.elements.caption.textContent = this.fullText;
+    } else {
+      this.visibleCharacters = 0;
+      this.elements.caption.textContent = "";
+    }
     this.elements.galleryDots.textContent = photos
       .map((_, index) => (index === this.galleryIndex ? "●" : "○"))
       .join("  ");
@@ -366,6 +377,7 @@ export class PhotoSystem {
     this.elements.single.hidden = false;
     this.mode = "single";
     this.gallery = null;
+    this.staticGalleryCaption = false;
     this.gestureStartX = null;
     return closed;
   }

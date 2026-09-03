@@ -7,11 +7,11 @@
 
 * { box-sizing: border-box; }
 
-html, body { margin: 0; min-height: 100%; background: #10131e; }
+html, body { margin: 0; width: 100%; height: 100%; background: #10131e; }
 
 body {
   min-height: 100svh;
-  overflow-x: hidden;
+  overflow: hidden;
   touch-action: manipulation;
 }
 
@@ -74,24 +74,29 @@ body {
 button, canvas { -webkit-tap-highlight-color: transparent; }
 
 .app-shell {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  padding: max(14px, env(safe-area-inset-top)) 14px max(14px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100svh;
+  min-height: 100svh;
+  margin: 0;
+  padding: max(8px, env(safe-area-inset-top)) 0 0;
 }
 
-.topbar, .help-row {
+.topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
 }
 
-.topbar { margin-bottom: 12px; }
-.top-actions { display: flex; align-items: center; gap: 10px; }
-.level-nav { display: flex; gap: 4px; }
-.level-nav a { padding: 7px 9px; border-radius: 999px; color: #dbeafe; background: #1d2740; font-size: 11px; text-decoration: none; }
+.topbar {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 14px 8px;
+}
 .eyebrow { margin: 0 0 4px; color: #8e96ad; font-size: 11px; letter-spacing: .16em; }
-h1 { margin: 0; font-family: system-ui, sans-serif; font-size: clamp(18px, 3vw, 28px); }
+h1 { margin: 0; font-family: system-ui, sans-serif; font-size: clamp(16px, 2.5vw, 24px); }
 
 button {
   border: 1px solid #606a85;
@@ -104,14 +109,16 @@ button {
 
 .game-stage {
   position: relative;
+  flex: 1 1 auto;
   width: 100%;
-  height: min(74svh, 640px);
-  min-height: 430px;
+  height: auto;
+  min-height: 0;
   overflow: hidden;
   border: 2px solid #05070c;
-  border-radius: 14px;
+  border-bottom: 0;
+  border-radius: 14px 14px 0 0;
   background: #5c94fc;
-  box-shadow: 0 18px 60px #0008;
+  box-shadow: none;
 }
 
 #game-canvas {
@@ -197,10 +204,7 @@ button {
 .debug-overlay[hidden] { display: none; }
 
 .autoplay-mode #game-canvas { cursor: default; }
-.autoplay-mode .level-nav,
-.autoplay-mode #debug-toggle,
 .credits-background .topbar,
-.credits-background .help-row,
 .credits-background .hud,
 .credits-background .status-pill,
 .credits-background .debug-overlay { display: none; }
@@ -371,8 +375,6 @@ button {
 
 @media (max-width: 720px) {
   .topbar { align-items: flex-start; }
-  .top-actions { align-items: flex-end; flex-direction: column-reverse; }
-  .level-nav a { padding: 6px 7px; }
   .photo-card {
     width: 96%;
     height: calc(100% - 12px);
@@ -428,7 +430,7 @@ button {
   overflow-y: auto;
   color: #f8f1dd;
   font-family: "STKaiti", "Kaiti SC", "KaiTi", "楷体", serif;
-  font-size: clamp(15px, 2.6vw, 20px);
+  font-size: clamp(17px, 2.8vw, 22px);
   line-height: 1.7;
   letter-spacing: .08em;
   text-align: center;
@@ -449,17 +451,8 @@ button {
 .loading-card span { grid-column: 1 / -1; }
 .loading-card progress { width: 100%; height: 18px; accent-color: #f7c948; }
 
-.help-row {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 10px;
-  color: #8e96ad;
-  font-size: 11px;
-}
-
 @media (max-width: 620px) {
-  .app-shell { padding-inline: 8px; }
-  .game-stage { min-height: 480px; height: 76svh; border-radius: 9px; }
-  .topbar button { padding: 8px 10px; font-size: 12px; }
+  .topbar { padding-inline: 8px; }
+  .game-stage { border-radius: 9px 9px 0 0; }
   .debug-overlay { width: calc(100% - 110px); font-size: 9px; }
 }

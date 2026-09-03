@@ -7,7 +7,7 @@ import { GameLoop } from "./game-loop.js";
 import { WeddingGame } from "./game.js";
 import { InputController } from "./input-controller.js";
 import { LevelConfigLoader, MapLoader } from "./level-config-loader.js";
-import { PhotoSystem } from "./photo-system.js?v=autoplay-1";
+import { PhotoSystem } from "./photo-system.js?v=final-ui-1";
 import { Renderer } from "./renderer.js";
 import { AudioSystem } from "./audio-system.js?v=autoplay-1";
 
@@ -16,7 +16,6 @@ const elements = {
   counter: document.querySelector("#counter-value"),
   status: document.querySelector("#status-pill"),
   debug: document.querySelector("#debug-overlay"),
-  debugToggle: document.querySelector("#debug-toggle"),
   photoModal: document.querySelector("#photo-modal"),
   photoTitle: document.querySelector("#photo-title"),
   photoImage: document.querySelector("#photo-image"),
@@ -102,9 +101,7 @@ async function boot() {
     audio.stopBackground(true);
   }
   const renderer = new Renderer(elements.canvas, loader, config.debug ?? {});
-  const debugOverlay = new DebugOverlay(elements.debug, config.debug?.enabled);
-  elements.debugToggle.textContent = debugOverlay.enabled ? "关闭调试" : "开启调试";
-  elements.debugToggle.setAttribute("aria-pressed", String(debugOverlay.enabled));
+  const debugOverlay = new DebugOverlay(elements.debug, false);
   // The automatic cut has no interactive targets. Synthetic commands from
   // AutoPlayController still use the same queue and state machine.
   const input = new InputController(autoplayMode ? [] : [elements.canvas, elements.photoModal]);
@@ -203,18 +200,6 @@ async function boot() {
     },
     () => game.render(),
   );
-
-  elements.debugToggle.addEventListener("click", () => {
-    const enabled = game.toggleDebug();
-    elements.debugToggle.textContent = enabled ? "关闭调试" : "开启调试";
-    elements.debugToggle.setAttribute("aria-pressed", String(enabled));
-  });
-  window.addEventListener("keydown", (event) => {
-    if (event.key.toLowerCase() !== "d") return;
-    const enabled = game.toggleDebug();
-    elements.debugToggle.textContent = enabled ? "关闭调试" : "开启调试";
-    elements.debugToggle.setAttribute("aria-pressed", String(enabled));
-  });
 
   window.weddingGame = game;
   window.weddingLevel = level;
