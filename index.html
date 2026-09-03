@@ -4,8 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#171a28" />
-    <title>我们的婚礼故事</title>
-    <link rel="stylesheet" href="./styles.css?v=final-ui-1" />
+    <title>我是互动请柬！别说话！点我！</title>
+    <meta name="description" content="我是互动请柬！别说话！点我！">
+
+    <meta property="og:title" content="我是互动请柬！别说话！点我！">
+    <meta property="og:description" content="2026.10.05 王郅臻与梁晓媛欢迎您的到来">
+    <meta property="og:image" content="https://github.com/HaibaraOperator/wedding_invitation/raw/main/assets/photos/weddingphoto_10.JPG">
+
+    <meta itemprop="name" content="我是互动请柬！别说话！点我！">
+    <meta itemprop="description" content="2026.10.05 王郅臻与梁晓媛欢迎您的到来">
+    <meta itemprop="image" content="https://github.com/HaibaraOperator/wedding_invitation/raw/main/assets/photos/weddingphoto_10.JPG">
+    <link rel="stylesheet" href="./styles.css?v=autoplay-1" />
+    <script>
+      document.title='王郅臻与梁晓媛的婚礼故事';
+    </script>
   </head>
   <body>
     <section id="experience-choice" class="experience-choice" hidden aria-labelledby="experience-choice-title">
@@ -64,6 +76,17 @@
       </section>
 
     </main>
+
+    <section id="credits-overlay" class="credits-overlay" hidden aria-label="制作人员名单">
+      <iframe id="credits-replay" title="从相遇篇重新播放的虚焦背景" tabindex="-1" aria-hidden="true"></iframe>
+      <div class="credits-veil"></div>
+      <div class="credits-card">
+        <p><span>制作：王郅臻，ChatGPT</span><span class="credit-tab">创意：王郅臻</span></p>
+        <p>出场人物：王郅臻，梁晓媛，阿贝尔</p>
+        <p>技术/场景/素材支持：ChatGPT</p>
+      </div>
+    </section>
+
     <audio
       id="background-audio"
       src="./assets/audio/Ground_Theme.mp3"
@@ -73,6 +96,6 @@
       webkit-playsinline
       aria-hidden="true"
     ></audio>
-    <script type="module" src="./src/main.js?v=final-ui-2"></script>
+    <script type="module" src="./src/main.js?v=credits-1"></script>
   </body>
 </html>

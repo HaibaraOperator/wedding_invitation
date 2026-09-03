@@ -1,4 +1,4 @@
-import { ASSET_PATHS } from "./constants.js";
+import { ASSET_PATHS, PlayerState } from "./constants.js";
 import { AssetLoader } from "./asset-loader.js?v=autoplay-1";
 import { AutoPlayController } from "./autoplay-controller.js?v=autoplay-1";
 import { CounterDisplay } from "./counter-display.js?v=counter-jump-1";
@@ -168,8 +168,10 @@ async function boot() {
     window.location.assign(nextUrl);
   };
 
+  let creditsShown = false;
   const showCredits = () => {
-    if (level !== "home") return;
+    if (level !== "home" || creditsShown) return;
+    creditsShown = true;
     loop.stop();
     audio.stopBackground(true);
     if (creditsBackground) {
@@ -181,7 +183,9 @@ async function boot() {
       return;
     }
     if (!elements.credits || !elements.creditsReplay) return;
-    const replayUrl = new URL(window.location.href);
+    const replayUrl = autoplayMode
+      ? new URL(window.location.href)
+      : new URL("./autoplay/", window.location.href);
     replayUrl.searchParams.set("level", "meet");
     replayUrl.searchParams.set("credits_bg", "1");
     replayUrl.searchParams.set("fresh", String(Date.now()));
@@ -197,6 +201,9 @@ async function boot() {
     (dt) => {
       autoplay?.update(dt, game);
       game.update(dt);
+      if (!autoplayMode && level === "home" && game.player.state === PlayerState.LEVEL_COMPLETE) {
+        showCredits();
+      }
     },
     () => game.render(),
   );
