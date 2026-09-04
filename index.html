@@ -7,19 +7,43 @@
     <title>我是互动请柬！别说话！点我！</title>
     <meta name="description" content="我是互动请柬！别说话！点我！">
 
+    <meta property="og:type" content="website">
     <meta property="og:title" content="我是互动请柬！别说话！点我！">
     <meta property="og:description" content="2026.10.05 王郅臻与梁晓媛欢迎您的到来">
-    <meta property="og:image" content="https://github.com/HaibaraOperator/wedding_invitation/raw/main/assets/photos/weddingphoto_10.JPG">
+    <meta property="og:url" content="https://haibaraoperator.github.io/wedding_invitation/">
+    <meta property="og:image" content="https://haibaraoperator.github.io/wedding_invitation/assets/photos/weddingphoto_10.JPG?v=share-20260904-1">
+    <meta property="og:image:secure_url" content="https://haibaraoperator.github.io/wedding_invitation/assets/photos/weddingphoto_10.JPG?v=share-20260904-1">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1066">
+    <meta property="og:image:height" content="1600">
+    <meta property="og:image:alt" content="王郅臻与梁晓媛的婚礼照片">
 
     <meta itemprop="name" content="我是互动请柬！别说话！点我！">
     <meta itemprop="description" content="2026.10.05 王郅臻与梁晓媛欢迎您的到来">
-    <meta itemprop="image" content="https://github.com/HaibaraOperator/wedding_invitation/raw/main/assets/photos/weddingphoto_10.JPG">
+    <meta itemprop="image" content="https://haibaraoperator.github.io/wedding_invitation/assets/photos/weddingphoto_10.JPG?v=share-20260904-1">
+    <link rel="image_src" href="https://haibaraoperator.github.io/wedding_invitation/assets/photos/weddingphoto_10.JPG?v=share-20260904-1">
     <link rel="stylesheet" href="./styles.css?v=autoplay-1" />
     <script>
-      document.title='王郅臻与梁晓媛的婚礼故事';
+      (() => {
+        const shareTitle = '我是互动请柬！别说话！点我！';
+        const titleElement = document.querySelector('title');
+        const keepShareTitle = () => {
+          if (document.title !== shareTitle) document.title = shareTitle;
+        };
+        keepShareTitle();
+        new MutationObserver(keepShareTitle).observe(titleElement, { childList: true });
+      })();
     </script>
   </head>
   <body>
+    <img
+      src="./assets/photos/weddingphoto_10.JPG?v=share-20260904-1"
+      alt=""
+      width="300"
+      height="450"
+      aria-hidden="true"
+      style="position:fixed;left:-10000px;top:-10000px"
+    />
     <section id="experience-choice" class="experience-choice" hidden aria-labelledby="experience-choice-title">
       <div class="experience-choice-card">
         <p class="eyebrow">CHOOSE YOUR JOURNEY</p>
